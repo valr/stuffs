@@ -1,0 +1,28 @@
+import sublime
+import sublime_plugin
+import re
+import webbrowser
+
+
+class Url(sublime_plugin.ViewEventListener):
+    regex = "\\bhttps?://[-A-Za-z0-9+&@#/%?=~_()|!:,.;']*[-A-Za-z0-9+&@#/%=~_(|]"
+    html = '<a href="url"><i style="color: white;">Open:</i> url</a>'
+
+    def on_hover(self, point, hover_zone):
+        if hover_zone != sublime.HOVER_TEXT:
+            return
+
+        x = self.view.rowcol(point)[1]
+        line = self.view.substr(self.view.line(point))
+
+        content = ""
+        for url in re.finditer(self.regex, line):
+            if x >= url.start() and x <= url.end():
+                content = self.html.replace('url', url.group())
+
+        if content:
+            self.view.show_popup(content, sublime.HIDE_ON_MOUSE_MOVE_AWAY,
+                                 point, on_navigate=self.url_clicked)
+
+    def url_clicked(self, url):
+        webbrowser.open_new_tab(url)
