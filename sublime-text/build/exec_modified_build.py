@@ -1,6 +1,6 @@
 import importlib
 
-# defined in exec.py
+# the default exec target is defined in exec.py
 default_exec = importlib.import_module("Default.exec")
 
 
