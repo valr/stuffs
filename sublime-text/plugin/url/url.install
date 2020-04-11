@@ -1,0 +1,4 @@
+- create a new 'Url' package directory:
+  ~/.config/sublime-text-3/Packages/Url
+
+- copy the file 'url.py' in the package directory
