@@ -6,7 +6,7 @@ import webbrowser
 
 class Url(sublime_plugin.ViewEventListener):
     regex = "\\bhttps?://[-A-Za-z0-9+&@#/%?=~_()|!:,.;']*[-A-Za-z0-9+&@#/%=~_(|]"
-    html = '<a href="url"><i style="color: white;">Open:</i> url</a>'
+    html = '<a href="url"><i>Open:</i> <u style="color:white;">url</u></a>'
 
     def on_hover(self, point, hover_zone):
         if hover_zone != sublime.HOVER_TEXT:
@@ -21,6 +21,7 @@ class Url(sublime_plugin.ViewEventListener):
                 content = self.html.replace('url', url.group())
 
         if content:
+            # doc: https://forum.sublimetext.com/t/dev-build-3070/14538
             self.view.show_popup(content, sublime.HIDE_ON_MOUSE_MOVE_AWAY,
                                  point, on_navigate=self.url_clicked)
 
