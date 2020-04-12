@@ -6,7 +6,7 @@ import sublime
 import sublime_plugin
 
 
-class Url(sublime_plugin.ViewEventListener):
+class UrlOpen(sublime_plugin.ViewEventListener):
     regex = "\\bhttps?://[-A-Za-z0-9+&@#/%?=~_()|!:,.;']*[-A-Za-z0-9+&@#/%=~_(|]"
     html = '<a href="url"><i>Open:</i> <u style="color:white;">url</u></a>'
 
