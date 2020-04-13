@@ -8,7 +8,7 @@ class PanelSwitch(sublime_plugin.WindowCommand):
     ignore_panels = ["find", "find_in_files", "replace"]
 
     def run(self):
-        panels = self.window.panels()
+        panels = sorted(self.window.panels())
         panels = [panel for panel in panels if panel not in self.ignore_panels]
 
         active_panel = self.window.active_panel()
