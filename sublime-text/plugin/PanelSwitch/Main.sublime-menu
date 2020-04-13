@@ -22,7 +22,7 @@
                                 "command": "edit_settings", "args":
                                 {
                                     "base_file": "${packages}/PanelSwitch/PanelSwitch.sublime-keymap",
-                                    "default": "[\n\t$0\n]\n"
+                                    "user_file": "${packages}/User/Default (${platform}).sublime-keymap"
                                 }
                             }
                         ]
