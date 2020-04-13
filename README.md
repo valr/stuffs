@@ -8,4 +8,4 @@
 
 ## Weechat
 
-* Plugin (Notify send)
+* Plugin (Notify Send)
