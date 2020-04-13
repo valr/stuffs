@@ -4,7 +4,7 @@ import importlib
 default_exec = importlib.import_module("Default.exec")
 
 
-class ExecModifiedBuildCommand(default_exec.ExecCommand):
+class ExecOnlyFailedOutputBuildCommand(default_exec.ExecCommand):
     def on_finished(self, proc):
         super().on_finished(proc)
 
