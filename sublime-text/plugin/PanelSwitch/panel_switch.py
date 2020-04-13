@@ -5,11 +5,12 @@ import sublime_plugin
 # test: window.run_command('panel_switch')
 
 class PanelSwitch(sublime_plugin.WindowCommand):
-    ignore_panels = ["find", "find_in_files", "replace"]
-
     def run(self):
+        settings = sublime.load_settings("PanelSwitch.sublime-settings")
+        ignored_panels = settings.get("ignored_panels", [])
+
         panels = sorted(self.window.panels())
-        panels = [panel for panel in panels if panel not in self.ignore_panels]
+        panels = [panel for panel in panels if panel not in ignored_panels]
 
         active_panel = self.window.active_panel()
 
