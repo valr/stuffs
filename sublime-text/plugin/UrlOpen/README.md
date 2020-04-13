@@ -1,4 +1,10 @@
-- create a new 'UrlOpen' package directory:
-  ~/.config/sublime-text-3/Packages/UrlOpen
+# URL Open Plugin
 
-- copy the file 'url_open.py' in the package directory
+## Installation
+
+Copy the plugin directory in the sublime text package directory:
+~/.config/sublime-text-3/Packages/UrlOpen
+
+## Usage
+
+When hovering over a URL, a clickable popup will be displayed.
