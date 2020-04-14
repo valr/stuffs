@@ -2,7 +2,7 @@ import sublime
 import sublime_plugin
 
 
-# test: window.run_command('panel_switch')
+# test: window.run_command("panel_switch")
 
 class PanelSwitch(sublime_plugin.WindowCommand):
     def run(self):

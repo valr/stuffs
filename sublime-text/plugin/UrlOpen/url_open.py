@@ -20,7 +20,7 @@ class UrlOpen(sublime_plugin.ViewEventListener):
         content = ""
         for url in re.finditer(self.regex, line):
             if x >= url.start() and x <= url.end():
-                content = self.html.replace('url', url.group())
+                content = self.html.replace("url", url.group())
 
         if content:
             # doc: https://forum.sublimetext.com/t/dev-build-3070/14538
@@ -31,4 +31,4 @@ class UrlOpen(sublime_plugin.ViewEventListener):
         # For some reason open_new_tab fails (well, firefox fails to start)
         # when there is no running instance of firefox. Replacing by xdg-open.
         #webbrowser.open_new_tab(self.url)
-        subprocess.Popen('xdg-open ' + url, shell=True)
+        subprocess.Popen("xdg-open " + url, shell=True)
