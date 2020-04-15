@@ -14,12 +14,12 @@ def handle_msg(data, buf, date, tags, displayed, highlight, prefix, message):
     buffer_type = weechat.buffer_get_string(buf, "localvar_type")
     buffer_name = weechat.buffer_get_string(buf, "short_name")
 
-    if buffer_type == "private":
-        if weechat.config_get_plugin("notify_private_message") == "on":
-            notify_send(buffer_name, message)
-    elif buffer_type == "channel" and int(highlight):
-        if weechat.config_get_plugin("notify_highlighted_message") == "on":
-            notify_send("{}@{}:".format(prefix, buffer_name), message)
+    if (buffer_type == "private" and
+            weechat.config_get_plugin("notify_private_message") == "on"):
+        notify_send(buffer_name, message)
+    elif (buffer_type == "channel" and int(highlight) and
+            weechat.config_get_plugin("notify_highlighted_message") == "on"):
+        notify_send("{}@{}:".format(prefix, buffer_name), message)
 
     return weechat.WEECHAT_RC_OK
 
