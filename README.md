@@ -1,4 +1,4 @@
-# Various stuffs
+# Various Stuffs
 
 ## Sublime Text
 
