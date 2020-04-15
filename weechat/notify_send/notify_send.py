@@ -1,4 +1,4 @@
-import weechat as weechat
+import weechat
 
 options = {
     "notify_private_message": ("on", "send a notification on private message"),
@@ -10,13 +10,13 @@ options = {
 }
 
 
-def handle_msg(data, buf, date, tags, displayed, highlight, prefix, message):
-    buffer_type = weechat.buffer_get_string(buf, "localvar_type")
-    buffer_name = weechat.buffer_get_string(buf, "short_name")
+def print_cb(data, _buffer, date, tags, displayed, highlight, prefix, message):
+    buffer_type = weechat.buffer_get_string(_buffer, "localvar_type")
+    buffer_name = weechat.buffer_get_string(_buffer, "localvar_channel")
 
     if (buffer_type == "private" and
             weechat.config_get_plugin("notify_private_message") == "on"):
-        notify_send(buffer_name, message)
+        notify_send("{}:".format(buffer_name), message)
     elif (buffer_type == "channel" and int(highlight) and
             weechat.config_get_plugin("notify_highlighted_message") == "on"):
         notify_send("{}@{}:".format(prefix, buffer_name), message)
@@ -32,23 +32,27 @@ def notify_send(origin, message):
          "arg5": "-a", "arg6": weechat.config_get_plugin("notification_application_name"),
          "arg7": "-i", "arg8": weechat.config_get_plugin("notification_icon"),
          "arg9": origin, "arg10": message},
-        20000, "notify_send_cb", "")
+        10000, "notify_send_cb", "")
 
     return weechat.WEECHAT_RC_OK
 
 
 def notify_send_cb(data, command, return_code, out, err):
-    if return_code == weechat.WEECHAT_HOOK_PROCESS_ERROR:
-        weechat.prnt("", "error with command: '%s'" % command)
-    elif return_code > 0:
-        weechat.prnt("", "notify-send return_code: %d" % return_code)
+    if return_code != 0:
+        weechat.prnt("", "notify_send command: '{}' has return code {}".format(command, return_code))
+
+    if out != "":
+        weechat.prnt("", "notify_send output: {}".format(out))
+
+    if err != "":
+        weechat.prnt("", "notify_send error: {}".format(err))
 
     return weechat.WEECHAT_RC_OK
 
 
 if __name__ == "__main__":
     weechat.register("notify_send", "valr", "0.2", "GPL3",
-                     "notify_send - a highlight & private notification script",
+                     "a highlight & private messages notification script",
                      "", "")
 
     for option, (value, description) in options.items():
@@ -56,4 +60,4 @@ if __name__ == "__main__":
             weechat.config_set_plugin(option, value)
             weechat.config_set_desc_plugin(option, description)
 
-    weechat.hook_print("", "", "", 1, "handle_msg", "")
+    weechat.hook_print("", "", "", 1, "print_cb", "")
