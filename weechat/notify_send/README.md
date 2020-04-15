@@ -2,7 +2,7 @@
 
 ## Installation
 
-Copy the script in the autoload python directory of weechat:
+Copy the script in the autoload python directory of WeeChat:
 ~/.weechat/python/autoload
 
 ## Configuration

@@ -6,6 +6,6 @@
 * Syntax file (Meson)
 * Build target (Only Failed Output)
 
-## Weechat
+## WeeChat
 
 * Script (Notify Send)
