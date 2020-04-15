@@ -2,7 +2,7 @@
 
 ## Installation
 
-Copy the build target file in the sublime text package user directory:
+Copy the build target file in the Sublime Text package user directory:
 ~/.config/sublime-text-3/Packages/User
 
 ## Usage

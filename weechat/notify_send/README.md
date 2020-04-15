@@ -2,12 +2,12 @@
 
 ## Installation
 
-Copy the script in the autoload python directory of WeeChat:
+Copy the script in the autoload Python directory of WeeChat:
 ~/.weechat/python/autoload
 
 ## Configuration
 
-If required, adapt the options of the script e.g. using /fset.  
+If required, adapt the script options e.g. using /fset.  
 **Options**: plugins.var.python.notify_send.*
 
 ## Usage

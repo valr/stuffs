@@ -2,7 +2,7 @@
 
 ## Installation
 
-Copy the plugin directory in the sublime text package directory:
+Copy the plugin directory in the Sublime Text package directory:
 ~/.config/sublime-text-3/Packages/UrlOpen
 
 ## Usage
