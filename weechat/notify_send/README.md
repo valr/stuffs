@@ -1,18 +1,18 @@
-# Notify Send Plugin
+# Notify Send Script
 
 ## Installation
 
-Copy the plugin in the autoload python directory of weechat:
+Copy the script in the autoload python directory of weechat:
 ~/.weechat/python/autoload
 
 ## Configuration
 
-If required, adapt the options of the plugin e.g. using /fset.  
+If required, adapt the options of the script e.g. using /fset.  
 **Options**: plugins.var.python.notify_send.*
 
 ## Usage
 
-With the default options, a notification will be sent using 'notify_send' in case of private message or highlight channel message.  
+With the default options, a notification will be sent using 'notify-send' in case of private message or highlight channel message.  
 
 **Formats of the notification:**  
 
