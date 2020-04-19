@@ -25,7 +25,7 @@ class UrlOpen(sublime_plugin.ViewEventListener):
         if content:
             # doc: https://forum.sublimetext.com/t/dev-build-3070/14538
             self.view.show_popup(content, sublime.HIDE_ON_MOUSE_MOVE_AWAY,
-                                 point, on_navigate=self.url_clicked)
+                                 point, 4096, on_navigate=self.url_clicked)
 
     def url_clicked(self, url):
         # For some reason open_new_tab fails (well, firefox fails to start)
