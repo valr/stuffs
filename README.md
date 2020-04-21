@@ -3,7 +3,7 @@
 ## Sublime Text
 
 * Plugins (Open URL, Panel Switch)
-* Syntax file (Meson)
+* Syntax file (Gettext, Meson)
 * Build target (Only Failed Output)
 
 ## WeeChat
