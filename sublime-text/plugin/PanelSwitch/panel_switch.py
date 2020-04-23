@@ -9,8 +9,9 @@ class PanelSwitch(sublime_plugin.WindowCommand):
         settings = sublime.load_settings("PanelSwitch.sublime-settings")
         ignored_panels = settings.get("ignored_panels", [])
 
-        panels = sorted(self.window.panels())
-        panels = [panel for panel in panels if panel not in ignored_panels]
+        panels = [panel for panel in sorted(self.window.panels())
+                            if panel not in ignored_panels
+                            and not self.is_empty(panel)]
 
         active_panel = self.window.active_panel()
 
@@ -19,3 +20,11 @@ class PanelSwitch(sublime_plugin.WindowCommand):
 
         self.window.run_command("show_panel", {"panel": panels[index_panel]})
         self.window.status_message("Switched to panel: " + panels[index_panel])
+
+    def is_empty(self, panel):
+        view = self.window.find_output_panel(panel.lstrip("output."))
+
+        if view is not None:
+            return not view.substr(sublime.Region(0, view.size())).strip()
+
+        return False
