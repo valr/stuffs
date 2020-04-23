@@ -16,10 +16,10 @@ def print_cb(data, _buffer, date, tags, displayed, highlight, prefix, message):
 
     if (buffer_type == "private" and
             weechat.config_get_plugin("notify_private_message") == "on"):
-        notify_send("{}:".format(buffer_name), message)
+        notify_send(f"{buffer_name}:", message)
     elif (buffer_type == "channel" and int(highlight) and
             weechat.config_get_plugin("notify_highlighted_message") == "on"):
-        notify_send("{}@{}:".format(prefix, buffer_name), message)
+        notify_send(f"{prefix}@{buffer_name}:", message)
 
     return weechat.WEECHAT_RC_OK
 
@@ -39,13 +39,13 @@ def notify_send(origin, message):
 
 def notify_send_cb(data, command, return_code, out, err):
     if return_code != 0:
-        weechat.prnt("", "notify_send command: '{}' has return code {}".format(command, return_code))
+        weechat.prnt("", f"notify_send command: '{command}' has return code {return_code}")
 
     if out != "":
-        weechat.prnt("", "notify_send output: {}".format(out))
+        weechat.prnt("", f"notify_send output: {out}")
 
     if err != "":
-        weechat.prnt("", "notify_send error: {}".format(err))
+        weechat.prnt("", f"notify_send error: {err}")
 
     return weechat.WEECHAT_RC_OK
 
