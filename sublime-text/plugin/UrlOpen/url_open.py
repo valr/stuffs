@@ -29,6 +29,9 @@ class UrlOpen(sublime_plugin.ViewEventListener):
 
     def url_clicked(self, url):
         # For some reason open_new_tab fails (well, firefox fails to start)
-        # when there is no running instance of firefox. Replacing by xdg-open.
-        #webbrowser.open_new_tab(self.url)
+        # when there is no running instance of firefox. This being said,
+        # using webbrowser blocks until the browser is opened and I don't want
+        # to start a thread for that now, so continue using xdg-open.
+
+        # webbrowser.open_new_tab(self.url)
         subprocess.Popen("xdg-open " + url, shell=True)
