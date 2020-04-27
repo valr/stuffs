@@ -2,7 +2,7 @@
 
 ## Sublime Text
 
-* Plugins (Open URL, Panel Switch)
+* Plugins (Open URL, Markdown to HTML, Panel Switch)
 * Syntax file (Gettext, Meson)
 * Build target (Only Failed Output)
 
