@@ -1,5 +1,6 @@
 import re
-import webbrowser
+import subprocess
+# import webbrowser
 
 import sublime
 import sublime_plugin
@@ -27,5 +28,7 @@ class UrlOpen(sublime_plugin.ViewEventListener):
                                  point, 4096, on_navigate=self.url_clicked)
 
     def url_clicked(self, url):
-        # for some reason open_new_tab fails with firefox
-        webbrowser.get("chromium").open_new_tab(url)
+        # For some reason open_new_tab fails (well, firefox fails to start)
+        # when there is no running instance of firefox. Replacing by xdg-open.
+        #webbrowser.open_new_tab(self.url)
+        subprocess.Popen("xdg-open " + url, shell=True)
