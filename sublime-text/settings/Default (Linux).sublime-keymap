@@ -1,0 +1,4 @@
+[
+    { "keys": ["ctrl+shift+o"], "command": "panel_switch" },
+    { "keys": ["ctrl+k", "ctrl+m"], "command": "toggle_menu" }
+]

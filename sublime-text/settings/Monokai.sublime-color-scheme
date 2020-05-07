@@ -1,0 +1,11 @@
+{
+    "variables":
+    {
+        "grey2": "hsl(55, 11%, 26%)"
+    },
+    "globals":
+    {
+        "selection": "var(grey2)",
+        "selection_border": "var(yellow4)",
+    }
+}
