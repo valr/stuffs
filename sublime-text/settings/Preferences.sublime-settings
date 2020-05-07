@@ -1,22 +1,26 @@
 {
-    "caret_extra_bottom": 0,
-    "caret_extra_top": 0,
-    "caret_style": "solid",
-    "color_scheme": "Packages/Color Scheme - Default/Monokai.sublime-color-scheme",
-    "copy_with_empty_selection": false,
-    "font_face": "DejaVu Sans Mono",
-    "highlight_modified_tabs": true,
-    "margin": 0,
-    "rulers":
-    [
-        80
-    ],
-    "scroll_past_end": false,
-    "shift_tab_unindent": true,
-    "show_encoding": true,
-    "show_line_endings": true,
-    "show_tab_close_buttons": false,
-    "theme": "Default.sublime-theme",
-    "translate_tabs_to_spaces": true,
-    "word_wrap": "false"
+	"caret_extra_bottom": 0,
+	"caret_extra_top": 0,
+	"caret_style": "solid",
+	"color_scheme": "Packages/Color Scheme - Default/Monokai.sublime-color-scheme",
+	"copy_with_empty_selection": false,
+	"font_face": "DejaVu Sans Mono",
+	"highlight_modified_tabs": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"margin": 0,
+	"rulers":
+	[
+		80
+	],
+	"scroll_past_end": false,
+	"shift_tab_unindent": true,
+	"show_encoding": true,
+	"show_line_endings": true,
+	"show_tab_close_buttons": false,
+	"theme": "Default.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"word_wrap": "false"
 }
