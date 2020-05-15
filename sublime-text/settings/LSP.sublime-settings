@@ -1,13 +1,62 @@
 {
+    "auto_show_diagnostics_panel": "always",
+    "show_diagnostics_count_in_view_status": true,
+    "show_code_actions_bulb": true,
+    "show_symbol_action_links": true,
     "clients":
     {
         "clangd":
         {
             "enabled": true
         },
-        "pyls":
+        "mspyls":
         {
-            "enabled": true
+            "enabled": true,
+            "languageId": "python",
+            "scopes": [ "source.python" ],
+            "syntaxes":
+            [
+                "Packages/Python/Python.sublime-syntax",
+                "Packages/MagicPython/grammars/MagicPython.tmLanguage",
+                "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage"
+            ],
+            "command": [ "dotnet", "exec", "/usr/lib/microsoft-python-language-server-git/Microsoft.Python.LanguageServer.dll" ],
+            "env":
+            {
+                "DOTNET_CLI_TELEMETRY_OPTOUT": "1"
+            },
+            "initializationOptions":
+            {
+                "interpreter":
+                {
+                    "properties":
+                    {
+                        "UseDefaultDatabase": true,
+                        "Version": "3.8.2"
+                    }
+                }
+            },
+            "settings":
+            {
+                "python":
+                {
+                    "autoComplete":
+                    {
+                        "extraPaths": [ "/opt/sublime_text" ]
+                    }
+                    // "analysis":
+                    // {
+                    //    "errors": [ "undefined-variable" ],
+                    //    "warnings": [ "unknown-parameter-name" ],
+                    //    "information": [ "unresolved-import" ],
+                    //    "disabled": [ "too-many-function-arguments", "parameter-missing" ]
+                    // },
+                    // "linting":
+                    // {
+                    //     "enabled": "false"
+                    // }
+                }
+            }
         }
     }
 }

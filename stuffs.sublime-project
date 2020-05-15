@@ -7,12 +7,5 @@
 	],
 	"settings":
 	{
-		"LSP":
-		{
-			"pyls":
-			{
-				"enabled": true
-			}
-		}
 	}
 }
