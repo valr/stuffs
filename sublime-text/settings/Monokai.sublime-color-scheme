@@ -1,7 +1,8 @@
 {
     "variables":
     {
-        "grey2": "hsl(55, 11%, 26%)"
+        "grey2": "hsl(55, 11%, 26%)",
+        "black3": "hsl(70, 8%, 13%)",
     },
     "globals":
     {

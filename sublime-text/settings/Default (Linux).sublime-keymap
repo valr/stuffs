@@ -1,4 +1,49 @@
 [
-    { "keys": ["ctrl+shift+o"], "command": "panel_switch" },
-    { "keys": ["ctrl+k", "ctrl+m"], "command": "toggle_menu" }
+    // disabled key bindings
+
+    { "keys": ["ctrl+]"], "command": "noop" },
+    { "keys": ["ctrl+["], "command": "noop" },
+    { "keys": ["ctrl+`"], "command": "noop" },
+
+    { "keys": ["ctrl+f4"], "command": "noop" },
+    { "keys": ["ctrl+insert"], "command": "noop" },
+
+    { "keys": ["ctrl+shift+l"], "command": "noop" },
+    { "keys": ["ctrl+shift+t"], "command": "noop" },
+    { "keys": ["ctrl+shift+w"], "command": "noop" },
+
+    { "keys": ["ctrl+k", "ctrl+backspace"], "command": "noop" },
+
+    { "keys": ["shift+f11"], "command": "noop" },
+    { "keys": ["shift+backspace"], "command": "noop" },
+    { "keys": ["shift+delete"], "command": "noop" },
+    { "keys": ["shift+insert"], "command": "noop" },
+
+    { "keys": ["alt+-"], "command": "noop" },
+    { "keys": ["alt+shift+-"], "command": "noop" },
+    { "keys": ["alt+keypad_minus"], "command": "noop" },
+    { "keys": ["alt+shift+keypad_minus"], "command": "noop" },
+
+    // modified key bindings
+
+    { "keys": ["f11"], "command": "toggle_distraction_free" },
+    { "keys": ["ctrl+k", "ctrl+c"], "command": "toggle_comment" },
+    { "keys": ["ctrl+k", "ctrl+d"], "command": "toggle_inline_diff" },
+    { "keys": ["ctrl+k", "ctrl+k"], "command": "toggle_comment", "args": { "block": true } },
+    { "keys": ["ctrl+k", "ctrl+m"], "command": "toggle_menu" },
+
+    { "keys": ["ctrl+d"], "command": "duplicate_line" },
+    { "keys": ["ctrl+j"], "command": "join_lines" },
+    { "keys": ["ctrl+l"], "command": "split_selection_into_lines" },
+
+    { "keys": ["ctrl+q"], "command": "find_under_expand" },
+    { "keys": ["ctrl+shift+q"], "command": "find_under_expand_skip" },
+
+    { "keys": ["ctrl+shift+o"], "command": "reopen_last_file" },
+
+    { "keys": ["ctrl+alt+v"], "command": "paste_from_history" },
+
+    // new key bindings
+
+    { "keys": ["ctrl+escape"], "command": "panel_switch" }
 ]
