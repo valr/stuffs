@@ -1,0 +1,21 @@
+#!/bin/bash
+
+on_post_save() {
+    case "$SYNTAX" in
+        Python)
+            /bin/autopep8 -i "$FILENAME"
+            /bin/isort "$FILENAME"
+            ;;
+    esac
+}
+
+EVENT="$1"
+SYNTAX="$2"
+FILENAME="$3"
+
+# /bin/logger --tag 'sublime-command' "event=$EVENT, syntax=$SYNTAX, filename=$FILENAME"
+
+case "$EVENT" in
+    on_post_save) on_post_save ;;
+    *) ;;
+esac
