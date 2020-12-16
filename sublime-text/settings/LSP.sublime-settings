@@ -32,7 +32,7 @@
                     "properties":
                     {
                         "UseDefaultDatabase": true,
-                        "Version": "3.8.2"
+                        "Version": "3.9"
                     }
                 }
             },
