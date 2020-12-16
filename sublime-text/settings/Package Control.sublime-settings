@@ -5,12 +5,15 @@
 	],
 	"installed_packages":
 	[
+		"BracketHighlighter",
 		"FileIcons",
 		"LSP",
 		"Package Control",
 		"PackageDev",
 		"Pretty JSON",
 		"SFTP",
+		"SublimeLinter",
+		"SublimeLinter-flake8",
 		"Terminal"
 	],
 	"submit_usage": false
