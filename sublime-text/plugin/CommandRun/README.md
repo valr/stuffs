@@ -7,7 +7,7 @@ Copy the plugin directory in the Sublime Text package directory:
 
 ## Usage
 
-Install an executable command (binary or script) named 'the_project_name'.sublime-command in the sublime project directory.  
+Install an executable command (binary or script) named 'the_project_name'.sublime-command in the Sublime Text project directory.  
 The command will be run on the predefined event types.
 
 List of predefined event types:
