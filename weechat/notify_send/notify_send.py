@@ -14,11 +14,14 @@ def print_cb(data, _buffer, date, tags, displayed, highlight, prefix, message):
     buffer_type = weechat.buffer_get_string(_buffer, "localvar_type")
     buffer_name = weechat.buffer_get_string(_buffer, "localvar_channel")
 
-    if (buffer_type == "private" and
-            weechat.config_get_plugin("notify_private_message") == "on"):
-        notify_send(f"{buffer_name}:", message)
-    elif (buffer_type == "channel" and int(highlight) and
-            weechat.config_get_plugin("notify_highlighted_message") == "on"):
+    if (weechat.config_get_plugin("notify_private_message") == "on"
+            and buffer_type == "private"):
+        self_msg = [tag for tag in tags.split(',') if tag == "self_msg"]
+        if not self_msg:
+            notify_send(f"{buffer_name}:", message)
+    elif (weechat.config_get_plugin("notify_highlighted_message") == "on"
+            and buffer_type == "channel"
+            and int(highlight)):
         notify_send(f"{prefix}@{buffer_name}:", message)
 
     return weechat.WEECHAT_RC_OK
@@ -51,7 +54,7 @@ def notify_send_cb(data, command, return_code, out, err):
 
 
 if __name__ == "__main__":
-    weechat.register("notify_send", "valr", "0.2", "GPL3",
+    weechat.register("notify_send", "valr", "0.3", "GPL3",
                      "a highlight & private messages notification script",
                      "", "")
 
