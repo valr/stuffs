@@ -12,12 +12,12 @@
 		"Vintage"
 	],
 	"margin": 0,
-    "match_brackets": false,
-    "match_brackets_angle": false,
-    "match_brackets_braces": false,
-    "match_brackets_content": false,
-    "match_brackets_square": false,
-    "match_tags": false,
+	"match_brackets": false,
+	"match_brackets_angle": false,
+	"match_brackets_braces": false,
+	"match_brackets_content": false,
+	"match_brackets_square": false,
+	"match_tags": false,
 	"rulers":
 	[
 		80
@@ -29,5 +29,5 @@
 	"show_tab_close_buttons": false,
 	"theme": "Default.sublime-theme",
 	"translate_tabs_to_spaces": true,
-	"word_wrap": "false",
+	"word_wrap": "false"
 }
