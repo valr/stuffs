@@ -1,13 +1,13 @@
-# Command Run Plugin
+# On Event Run Plugin
 
 ## Installation
 
 Copy the plugin directory in the Sublime Text package directory:
-~/.config/sublime-text-3/Packages/CommandRun
+~/.config/sublime-text-3/Packages/OnEventRun
 
 ## Usage
 
-Install an executable command (binary or script) named 'the_project_name'.sublime-command in the Sublime Text project directory.  
+Install an executable command (binary or script) named 'the_project_name'.sublime-onevent in the Sublime Text project directory.  
 The command will be run on the predefined event types.
 
 List of predefined event types:

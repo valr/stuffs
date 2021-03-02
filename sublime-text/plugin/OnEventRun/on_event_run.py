@@ -6,11 +6,11 @@ import sublime
 import sublime_plugin
 
 
-class CommandRun(sublime_plugin.EventListener):
+class OnEventRun(sublime_plugin.EventListener):
     def on_post_save_async(self, view):
-        self.command_run(view, 'on_post_save')
+        self.run_command(view, 'on_post_save')
 
-    def command_run(self, view, event):
+    def run_command(self, view, event):
         filename = view.file_name()
         project_file_name = view.window().project_file_name()
 
@@ -19,7 +19,7 @@ class CommandRun(sublime_plugin.EventListener):
 
         command = re.sub(
             'sublime-project$',
-            'sublime-command', project_file_name)
+            'sublime-onevent', project_file_name)
 
         syntax = view.settings().get('syntax', 'None') \
             .replace('.sublime-syntax', '').replace('.tmLanguage', '') \
