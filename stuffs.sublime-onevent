@@ -13,9 +13,11 @@ EVENT="$1"
 SYNTAX="$2"
 FILENAME="$3"
 
-# /bin/logger --tag 'sublime-command' "event=$EVENT, syntax=$SYNTAX, filename=$FILENAME"
-
 case "$EVENT" in
-    on_post_save) on_post_save ;;
-    *) ;;
+    on_post_save)
+        on_post_save
+        ;;
+    *)
+        /bin/logger --tag 'sublime-command' "event=$EVENT, syntax=$SYNTAX, filename=$FILENAME"
+        ;;
 esac
