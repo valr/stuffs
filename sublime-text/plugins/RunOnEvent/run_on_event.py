@@ -6,7 +6,7 @@ import sublime
 import sublime_plugin
 
 
-class OnEventRun(sublime_plugin.EventListener):
+class RunOnEvent(sublime_plugin.EventListener):
     def on_post_save_async(self, view):
         self.run_command(view, 'on_post_save')
 

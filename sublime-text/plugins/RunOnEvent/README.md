@@ -1,9 +1,9 @@
-# On Event Run Plugin
+# Run On Event Plugin
 
 ## Installation
 
 Copy the plugin directory in the Sublime Text package directory:
-~/.config/sublime-text-3/Packages/OnEventRun
+~/.config/sublime-text-3/Packages/RunOnEvent
 
 ## Usage
 

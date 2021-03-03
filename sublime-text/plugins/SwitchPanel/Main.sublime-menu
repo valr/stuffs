@@ -6,14 +6,14 @@
                 "id": "package-settings",
                 "children": [
                     {
-                        "caption": "PanelSwitch",
-                        "id": "panel-switch",
+                        "caption": "SwitchPanel",
+                        "id": "switch-panel",
                         "children": [
                             {
                                 "caption": "Settings",
                                 "command": "edit_settings", "args":
                                 {
-                                    "base_file": "${packages}/PanelSwitch/PanelSwitch.sublime-settings",
+                                    "base_file": "${packages}/SwitchPanel/SwitchPanel.sublime-settings",
                                     "default": "{\n\t$0\n}\n"
                                 }
                             },
@@ -21,7 +21,7 @@
                                 "caption": "Key Bindings",
                                 "command": "edit_settings", "args":
                                 {
-                                    "base_file": "${packages}/PanelSwitch/PanelSwitch.sublime-keymap",
+                                    "base_file": "${packages}/SwitchPanel/SwitchPanel.sublime-keymap",
                                     "user_file": "${packages}/User/Default (${platform}).sublime-keymap"
                                 }
                             }

@@ -2,11 +2,11 @@ import sublime
 import sublime_plugin
 
 
-# test: window.run_command("panel_switch")
+# test: window.run_command("switch_panel")
 
-class PanelSwitch(sublime_plugin.WindowCommand):
+class SwitchPanel(sublime_plugin.WindowCommand):
     def run(self):
-        settings = sublime.load_settings("PanelSwitch.sublime-settings")
+        settings = sublime.load_settings("SwitchPanel.sublime-settings")
         ignored_panels = settings.get("ignored_panels", [])
 
         panels = [panel for panel in sorted(self.window.panels())

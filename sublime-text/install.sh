@@ -10,10 +10,10 @@ if [[ "$PWD" != *"$SOURCE" ]]; then
 fi
 
 # plugins
-for PLUGIN in "CommandRun" "MarkdownToHtml" "OnEventRun" "PanelSwitch" "UrlOpen"
+for PLUGIN in "MarkdownToHtml" "OpenUrl" "RunCommand" "RunOnEvent" "SwitchPanel"
 do
     rm -f "$TARGET/$PLUGIN"
-    ln -s "$PWD/plugin/$PLUGIN" "$TARGET/$PLUGIN"
+    ln -s "$PWD/plugins/$PLUGIN" "$TARGET/$PLUGIN"
 done
 
 # settings

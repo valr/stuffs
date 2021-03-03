@@ -105,5 +105,5 @@
 
     // new key bindings
 
-    { "keys": ["ctrl+escape"], "command": "panel_switch" },
+    { "keys": ["ctrl+escape"], "command": "switch_panel" },
 ]

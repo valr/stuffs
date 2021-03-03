@@ -1,9 +1,9 @@
-# URL Open Plugin
+# Open URL Plugin
 
 ## Installation
 
 Copy the plugin directory in the Sublime Text package directory:
-~/.config/sublime-text-3/Packages/UrlOpen
+~/.config/sublime-text-3/Packages/OpenUrl
 
 ## Usage
 

@@ -1,9 +1,9 @@
-# Panel Switch Plugin
+# Switch Panel Plugin
 
 ## Installation
 
 Copy the plugin directory in the Sublime Text package directory:
-~/.config/sublime-text-3/Packages/PanelSwitch
+~/.config/sublime-text-3/Packages/SwitchPanel
 
 ## Configuration
 

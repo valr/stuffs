@@ -4,7 +4,7 @@ import sublime
 import sublime_plugin
 
 
-class UrlOpen(sublime_plugin.ViewEventListener):
+class OpenUrl(sublime_plugin.ViewEventListener):
     regex = "\\bhttps?://[-A-Za-z0-9+&@#/%?=~_()|!:,.;']*[-A-Za-z0-9+&@#/%=~_(|]"
     html = '<a href="url"><i>Open:</i> <u style="color:white;">url</u></a>'
 
@@ -23,7 +23,7 @@ class UrlOpen(sublime_plugin.ViewEventListener):
         if content:
             # doc: https://forum.sublimetext.com/t/dev-build-3070/14538
             self.view.show_popup(content, sublime.HIDE_ON_MOUSE_MOVE_AWAY,
-                                 point, 4096, on_navigate=self.url_clicked)
+                                 point, 4096, on_navigate=self.clicked_url)
 
-    def url_clicked(self, url):
+    def clicked_url(self, url):
         sublime.run_command("open_url", {"url": url})

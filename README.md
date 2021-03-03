@@ -3,7 +3,7 @@
 ## Sublime Text
 
 * Build target (Only Failed Output)
-* Plugins (Command Run, Markdown to HTML, Open URL, Panel Switch)
+* Plugins (Markdown to HTML, Open URL, Run Command, Run On Event, Switch Panel)
 * Settings files (My Configuration)
 * Syntax files (Gettext, Meson)
 
