@@ -1,9 +1,8 @@
 import os
 import threading
 import webbrowser
-
-from urllib.request import Request, urlopen
 from urllib.error import HTTPError, URLError
+from urllib.request import Request, urlopen
 
 import sublime
 import sublime_plugin

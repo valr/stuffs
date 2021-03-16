@@ -7,7 +7,7 @@
         "layer1.opacity": 0.1,                          // between
         "layer1.inner_margin": [0, 0, 0, 1],            // side bar and
         "layer1.draw_center": false,                    // status bar
-        "content_margin": 0,
+        "content_margin": 0
     },
     {
         "class": "tabset_control",
@@ -46,7 +46,11 @@
     {
         "class": "panel_button_control",
         "layer0.texture": "Theme - Default/common/light/panels_button.png",
-        "layer0.opacity": { "target": 0.4, "speed": 4.0, "interpolation": "smoothstep" },
+        "layer0.opacity": {
+            "target": 0.4,
+            "speed": 4.0,
+            "interpolation": "smoothstep"
+        },
         "content_margin": [0, 0] // hide panel button
     },
     {

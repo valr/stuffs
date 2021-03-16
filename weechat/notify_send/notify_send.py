@@ -42,7 +42,8 @@ def notify_send(origin, message):
 
 def notify_send_cb(data, command, return_code, out, err):
     if return_code != 0:
-        weechat.prnt("", f"notify_send command: '{command}' has return code {return_code}")
+        weechat.prnt(
+            "", f"notify_send command: '{command}' has return code {return_code}")
 
     if out != "":
         weechat.prnt("", f"notify_send output: {out}")

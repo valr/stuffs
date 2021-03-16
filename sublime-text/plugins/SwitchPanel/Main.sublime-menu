@@ -11,16 +11,16 @@
                         "children": [
                             {
                                 "caption": "Settings",
-                                "command": "edit_settings", "args":
-                                {
+                                "command": "edit_settings",
+                                "args": {
                                     "base_file": "${packages}/SwitchPanel/SwitchPanel.sublime-settings",
                                     "default": "{\n\t$0\n}\n"
                                 }
                             },
                             {
                                 "caption": "Key Bindings",
-                                "command": "edit_settings", "args":
-                                {
+                                "command": "edit_settings",
+                                "args": {
                                     "base_file": "${packages}/SwitchPanel/SwitchPanel.sublime-keymap",
                                     "user_file": "${packages}/User/Default (${platform}).sublime-keymap"
                                 }

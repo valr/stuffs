@@ -1,9 +1,4 @@
 {
     // list of panels to ignore when switching between panels
-    "ignored_panels":
-    [
-        "find",
-        "find_in_files",
-        "replace"
-    ]
+    "ignored_panels": ["find", "find_in_files", "replace"]
 }

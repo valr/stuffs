@@ -3,46 +3,39 @@
     "show_diagnostics_count_in_view_status": true,
     "show_code_actions_bulb": true,
     "show_symbol_action_links": true,
-    "clients":
-    {
-        "clangd":
-        {
+    "clients": {
+        "clangd": {
             "enabled": true
         },
-        "mspyls":
-        {
+        "mspyls": {
             "enabled": true,
             "languageId": "python",
-            "scopes": [ "source.python" ],
-            "syntaxes":
-            [
+            "scopes": ["source.python"],
+            "syntaxes": [
                 "Packages/Python/Python.sublime-syntax",
                 "Packages/MagicPython/grammars/MagicPython.tmLanguage",
                 "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage"
             ],
-            "command": [ "dotnet", "exec", "/usr/lib/microsoft-python-language-server-git/Microsoft.Python.LanguageServer.dll" ],
-            "env":
-            {
+            "command": [
+                "dotnet",
+                "exec",
+                "/usr/lib/microsoft-python-language-server-git/Microsoft.Python.LanguageServer.dll"
+            ],
+            "env": {
                 "DOTNET_CLI_TELEMETRY_OPTOUT": "1"
             },
-            "initializationOptions":
-            {
-                "interpreter":
-                {
-                    "properties":
-                    {
+            "initializationOptions": {
+                "interpreter": {
+                    "properties": {
                         "UseDefaultDatabase": true,
                         "Version": "3.9"
                     }
                 }
             },
-            "settings":
-            {
-                "python":
-                {
-                    "autoComplete":
-                    {
-                        "extraPaths": [ "/opt/sublime_text" ]
+            "settings": {
+                "python": {
+                    "autoComplete": {
+                        "extraPaths": ["/opt/sublime_text"]
                     }
                     // "analysis":
                     // {
