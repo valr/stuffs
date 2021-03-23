@@ -3,7 +3,7 @@
 on_post_save() {
     case "$SYNTAX" in
         Python)
-            /bin/autopep8 -i "$FILENAME"
+            /bin/autopep8 -i --max-line-length 120 "$FILENAME"
             /bin/isort "$FILENAME"
             ;;
     esac
