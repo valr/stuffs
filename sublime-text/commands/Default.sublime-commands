@@ -1,0 +1,99 @@
+[
+    {
+        "caption": "Run Command",
+        "command": "run_command",
+        "args": {
+            "cwd": "$project_path"
+        }
+    },
+    {
+        "caption": "Git Status",
+        "command": "run_command",
+        "args": {
+            "command": "git status -sb",
+            "cwd": "$project_path",
+            "timeout": 5,
+            "source": "none",
+            "target": "window"
+        }
+    },
+    {
+        "caption": "JSON Compress (Minify)",
+        "command": "run_command",
+        "args": {
+            "command": "jq -c ."
+        }
+    },
+    {
+        "caption": "JSON Filter",
+        "command": "run_command",
+        "args": {
+            "command": "jq --indent 4 ${arg_filter|.}",
+            "target": "window"
+        }
+    },
+    {
+        "caption": "JSON Validate",
+        "command": "run_command",
+        "args": {
+            "command": "jq type",
+            "target": "none"
+        }
+    },
+    {
+        "caption": "Prettier",
+        "command": "run_command",
+        "args": {
+            "command": "prettier --parser ${arg_parser} --print-width 1024 --quote-props preserve --tab-width ${arg_tab_width|4}"
+        }
+    },
+    {
+        "caption": "Prettier (CSS)",
+        "command": "run_command",
+        "args": {
+            "command": "prettier --parser css --print-width 1024 --quote-props preserve --tab-width 2"
+        }
+    },
+    {
+        "caption": "Prettier (JSON)",
+        "command": "run_command",
+        "args": {
+            "command": "prettier --parser json --print-width 1024 --quote-props preserve --tab-width 4 --trailing-comma none"
+        }
+    },
+    {
+        "caption": "Prettier (JSON5)",
+        "command": "run_command",
+        "args": {
+            "command": "prettier --parser json5 --print-width 1024 --quote-props preserve --tab-width 4 --trailing-comma none"
+        }
+    },
+    {
+        "caption": "Prettier (HTML)",
+        "command": "run_command",
+        "args": {
+            "command": "prettier --parser html --print-width 1024 --quote-props preserve --tab-width 2"
+        }
+    },
+    {
+        "caption": "Prettier (Markdown)",
+        "command": "run_command",
+        "args": {
+            "command": "prettier --parser markdown --print-width 1024"
+        }
+    },
+    {
+        "caption": "Prettier (XML)",
+        "command": "run_command",
+        "args": {
+            "command": "~/.node/node_modules/.bin/prettier --parser xml --print-width 1024 --quote-props preserve --tab-width 4 --xml-self-closing-space false"
+        }
+    },
+    {
+        "caption": "Prettier (YAML)",
+        "command": "run_command",
+        "args": {
+            "command": "prettier --parser yaml --print-width 1024 --quote-props preserve --tab-width 2"
+        }
+    }
+]
