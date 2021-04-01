@@ -1,6 +1,7 @@
 {
     "bootstrapped": true,
-    "in_process_packages": [],
+    "in_process_packages": [
+    ],
     "installed_packages": [
         "BracketHighlighter",
         "EasyDiff",
@@ -16,5 +17,5 @@
         "Terminal",
         "Theme - Monokai Pro"
     ],
-    "submit_usage": false
+    "submit_usage": false,
 }
