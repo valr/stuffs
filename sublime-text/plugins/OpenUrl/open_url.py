@@ -1,3 +1,4 @@
+import html
 import re
 
 import sublime
@@ -18,7 +19,7 @@ class OpenUrl(sublime_plugin.ViewEventListener):
         content = ""
         for url in re.finditer(self.regex, line):
             if x >= url.start() and x <= url.end():
-                content = self.html.replace("url", url.group())
+                content = self.html.replace("url", html.escape(url.group()))
 
         if content:
             # doc: https://forum.sublimetext.com/t/dev-build-3070/14538
