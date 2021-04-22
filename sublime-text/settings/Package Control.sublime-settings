@@ -1,21 +1,23 @@
 {
-    "bootstrapped": true,
-    "in_process_packages": [
-    ],
-    "installed_packages": [
-        "BracketHighlighter",
-        "EasyDiff",
-        "LSP",
-        "Package Control",
-        "PackageDev",
-        "PackageResourceViewer",
-        "SFTP",
-        "SublimeLinter",
-        "SublimeLinter-flake8",
-        "SublimeLinter-json",
-        "SublimeLinter-shellcheck",
-        "Terminal",
-        "Theme - Monokai Pro"
-    ],
-    "submit_usage": false,
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"BracketHighlighter",
+		"EasyDiff",
+		"LSP",
+		"Package Control",
+		"PackageDev",
+		"PackageResourceViewer",
+		"SFTP",
+		"SublimeLinter",
+		"SublimeLinter-flake8",
+		"SublimeLinter-json",
+		"SublimeLinter-shellcheck",
+		"Terminal",
+		"Theme - Monokai Pro"
+	],
+	"submit_usage": false
 }
