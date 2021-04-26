@@ -17,10 +17,10 @@ do
 done
 
 # settings
-for SETTING in "Default (Linux).sublime-keymap" "Default.sublime-theme" \
+for SETTING in "Default (Linux).sublime-keymap" \
     "Distraction Free.sublime-settings" "LSP.sublime-settings" \
-    "Monokai.sublime-color-scheme" "Package Control.sublime-settings" \
-    "Preferences.sublime-settings" "Terminal.sublime-settings"
+    "Package Control.sublime-settings" "Preferences.sublime-settings" \
+    "Terminal.sublime-settings"
 do
     rm -f "$TARGET/User/$SETTING"
     ln -s "$PWD/settings/$SETTING" "$TARGET/User/$SETTING"
