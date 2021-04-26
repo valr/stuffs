@@ -3,7 +3,7 @@
 set -u
 
 SOURCE="/stuffs/sublime-text"
-TARGET="$HOME"/.config/sublime-text-3/Packages
+TARGET="$HOME"/.config/sublime-text/Packages
 
 if [[ "$PWD" != *"$SOURCE" ]]; then
     echo "The script must be run from within its directory."

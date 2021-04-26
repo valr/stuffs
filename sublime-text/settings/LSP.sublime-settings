@@ -35,7 +35,7 @@
             "settings": {
                 "python": {
                     "autoComplete": {
-                        "extraPaths": ["/opt/sublime_text"]
+                        "extraPaths": ["/opt/sublime_text/Lib/python38"]
                     }
                     // "analysis":
                     // {

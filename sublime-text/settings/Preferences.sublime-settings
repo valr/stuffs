@@ -22,7 +22,7 @@
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
-		"Vintage"
+		"Vintage",
 	],
 	"line_padding_bottom": 1,
 	"line_padding_top": 1,
@@ -49,5 +49,5 @@
 	"show_tab_close_buttons": false,
 	"theme": "Monokai Classic.sublime-theme",
 	"translate_tabs_to_spaces": true,
-	"word_wrap": "false"
+	"word_wrap": "false",
 }
