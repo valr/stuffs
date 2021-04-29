@@ -6,18 +6,6 @@
 	"copy_with_empty_selection": false,
 	"drag_text": false,
 	"draw_minimap_border": true,
-	"folder_exclude_patterns":
-	[
-		".svn",
-		".git",
-		".hg",
-		"CVS",
-		".Trash",
-		".Trash-*",
-		".pytest_cache",
-		".venv",
-		"__pycache__"
-	],
 	"font_face": "DejaVu Sans Mono",
 	"font_size": 10.5,
 	"git_diff_target": "head",
