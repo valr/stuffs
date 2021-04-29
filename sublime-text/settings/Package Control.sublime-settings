@@ -17,7 +17,7 @@
 		"SublimeLinter-json",
 		"SublimeLinter-shellcheck",
 		"Terminal",
-		"Theme - Monokai Pro"
+		"Theme - Monokai Pro",
 	],
 	"submit_usage": false,
 }

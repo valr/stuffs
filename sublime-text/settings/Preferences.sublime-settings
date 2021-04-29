@@ -1,8 +1,8 @@
 {
 	"caret_extra_bottom": 0,
 	"caret_extra_top": 0,
-	"caret_style": "solid",
-	"color_scheme": "Monokai Classic.sublime-color-scheme",
+	"color_scheme": "Packages/Color Scheme - Default/Monokai.sublime-color-scheme",
+	"console_max_history_lines": 10000,
 	"copy_with_empty_selection": false,
 	"drag_text": false,
 	"draw_minimap_border": true,
@@ -12,6 +12,8 @@
 		".git",
 		".hg",
 		"CVS",
+		".Trash",
+		".Trash-*",
 		".pytest_cache",
 		".venv",
 		"__pycache__"
@@ -20,9 +22,10 @@
 	"font_size": 10.5,
 	"git_diff_target": "head",
 	"highlight_modified_tabs": true,
-	"ignored_packages":
+	"indent_guide_options":
 	[
-		"Vintage",
+		"draw_normal",
+		"solid"
 	],
 	"line_padding_bottom": 1,
 	"line_padding_top": 1,
@@ -37,7 +40,8 @@
 	"monokai_pro_sidebar_font_size": 13.5,
 	"monokai_pro_sidebar_lighter": true,
 	"monokai_pro_sidebar_row_padding": 4,
-	"monokai_pro_ui_font_face": "DejaVu Sans Mono",
+	"monokai_pro_ui_font_face": "DejaVu Sans",
+	"preview_on_click": "only_left",
 	"rulers":
 	[
 		80
