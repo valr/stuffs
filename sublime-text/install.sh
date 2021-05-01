@@ -40,7 +40,7 @@ do
     ln -s "$PWD/syntax/$SYNTAX" "$TARGET/User/$SYNTAX"
 done
 
-# build
+# builds
 for BUILD in "exec_only_failed_output_build.py"
 do
     rm -f "$TARGET/User/$BUILD"
