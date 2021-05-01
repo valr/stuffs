@@ -1,10 +1,5 @@
 # Run Command Plugin
 
-## Installation
-
-Copy the plugin directory in the Sublime Text package directory:
-~/.config/sublime-text-3/Packages/RunCommand
-
 ## Usage
 
 The Text Command 'run_command' allows executing any command via the command palette.  

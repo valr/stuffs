@@ -1,10 +1,5 @@
 # Markdown to HTML Plugin
 
-## Installation
-
-Copy the plugin directory in the Sublime Text package directory:
-~/.config/sublime-text-3/Packages/MarkdownToHtml
-
 ## Usage
 
 When saving a Markdown file, the text will be rendered in HTML using the github API: https://developer.github.com/v3/markdown/  
