@@ -1,8 +1,6 @@
 import sublime
 import sublime_plugin
 
-# test: window.run_command("switch_panel")
-
 
 class SwitchPanel(sublime_plugin.WindowCommand):
     def run(self):
