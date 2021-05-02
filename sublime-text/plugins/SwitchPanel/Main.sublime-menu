@@ -21,7 +21,7 @@
                                 "caption": "Key Bindings",
                                 "command": "edit_settings",
                                 "args": {
-                                    "base_file": "${packages}/SwitchPanel/SwitchPanel.sublime-keymap",
+                                    "base_file": "${packages}/SwitchPanel/Default (${platform}).sublime-keymap",
                                     "user_file": "${packages}/User/Default (${platform}).sublime-keymap"
                                 }
                             }
