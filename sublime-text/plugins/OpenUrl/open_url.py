@@ -5,7 +5,7 @@ import sublime
 import sublime_plugin
 
 
-class OpenUrl(sublime_plugin.ViewEventListener):
+class OpenUrlOnClick(sublime_plugin.ViewEventListener):
     regex = "\\bhttps?://[-A-Za-z0-9+&@#/%?=~_()|!:,.;']*[-A-Za-z0-9+&@#/%=~_(|]"
     html = '<a href="url"><i>Open:</i> <u style="color:white;">url</u></a>'
 
@@ -28,3 +28,17 @@ class OpenUrl(sublime_plugin.ViewEventListener):
 
     def clicked_url(self, url):
         sublime.run_command("open_url", {"url": url})
+
+
+class OpenUrlOnSelectionCommand(sublime_plugin.WindowCommand):
+    def run(self):
+        settings = sublime.load_settings("OpenUrl.sublime-settings")
+        items = settings.get("url_list", [])
+
+        self.window.show_quick_panel(
+            items, lambda id: self.on_done(id, items),
+            sublime.KEEP_OPEN_ON_FOCUS_LOST)
+
+    def on_done(self, id, items):
+        if id >= 0:
+            sublime.run_command("open_url", {"url": items[id][1]})
