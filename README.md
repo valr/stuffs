@@ -1,5 +1,9 @@
 # Various Stuffs
 
+## Shell Script
+
+- Utilities (audio, battery, brightness, datetime, winctrl, wireless)
+
 ## Sublime Text
 
 - Build target (Only Failed Output)
