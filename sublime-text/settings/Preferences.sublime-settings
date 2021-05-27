@@ -42,4 +42,8 @@
 	"theme": "Monokai Classic.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"word_wrap": "false",
+	"ignored_packages":
+	[
+		"Vintage",
+	],
 }
