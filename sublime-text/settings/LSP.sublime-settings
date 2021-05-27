@@ -1,54 +1,29 @@
 {
-    "auto_show_diagnostics_panel": "never",
     "show_diagnostics_count_in_view_status": true,
-    "show_code_actions_bulb": true,
-    "show_symbol_action_links": true,
     "clients": {
         "clangd": {
             "enabled": true
         },
-        "mspyls": {
+        "pylsp": {
             "enabled": true,
-            "languageId": "python",
-            "scopes": ["source.python"],
-            "syntaxes": [
-                "Packages/Python/Python.sublime-syntax",
-                "Packages/MagicPython/grammars/MagicPython.tmLanguage",
-                "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage"
-            ],
-            "command": [
-                "dotnet",
-                "exec",
-                "/usr/lib/microsoft-python-language-server-git/Microsoft.Python.LanguageServer.dll"
-            ],
-            "env": {
-                "DOTNET_CLI_TELEMETRY_OPTOUT": "1"
-            },
-            "initializationOptions": {
-                "interpreter": {
-                    "properties": {
-                        "UseDefaultDatabase": true,
-                        "Version": "3.9"
-                    }
-                }
-            },
+            "command": ["pylsp"],
+            "selector": "source.python",
             "settings": {
-                "python": {
-                    "autoComplete": {
-                        "extraPaths": ["/opt/sublime_text/Lib/python33"]
-                    }
-                    // "analysis":
-                    // {
-                    //    "errors": [ "undefined-variable" ],
-                    //    "warnings": [ "unknown-parameter-name" ],
-                    //    "information": [ "unresolved-import" ],
-                    //    "disabled": [ "too-many-function-arguments", "parameter-missing" ]
-                    // },
-                    // "linting":
-                    // {
-                    //     "enabled": "false"
-                    // }
-                }
+                "pylsp.env": {
+                    "PYTHONPATH": "/opt/sublime_text/Lib/python38"
+                },
+                "pylsp.configurationSources": [
+                    "flake8"
+                ],
+                "pylsp.plugins.autopep8.enabled": true,
+                "pylsp.plugins.flake8.enabled": true,
+                "pylsp.plugins.pycodestyle.enabled": false,
+                "pylsp.plugins.pydocstyle.enabled": false,
+                "pylsp.plugins.pyflakes.enabled": false,
+                "pylsp.plugins.pylint.enabled": false,
+                "pylsp.plugins.rope_completion.enabled": false,
+                "pylsp.plugins.rope_rename.enabled": false,
+                "pylsp.plugins.yapf.enabled": false
             }
         }
     }
