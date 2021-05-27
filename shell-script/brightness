@@ -24,7 +24,7 @@ BRIGHTNESS_VAL="brightness"
 MAX=$(cat "$BRIGHTNESS_PATH/$BRIGHTNESS_MAX")
 VAL=$(cat "$BRIGHTNESS_PATH/$BRIGHTNESS_VAL")
 
-OLD=$(( $VAL * 100 / $MAX ))
+OLD=$(( VAL * 100 / MAX ))
 
 case "$1" in
   [0-9]*) NEW=$1 ;;
@@ -33,10 +33,10 @@ case "$1" in
   *) exit 1 ;;
 esac
 
-NEW=$(( $NEW <= 100 ? $NEW : 100 ))
-NEW=$(( $NEW >= 0 ? $NEW : 0 ))
+NEW=$(( NEW <= 100 ? NEW : 100 ))
+NEW=$(( NEW >= 0 ? NEW : 0 ))
 
-VAL=$(( $MAX * $NEW / 100 ))
+VAL=$(( MAX * NEW / 100 ))
 
 echo $VAL > "$BRIGHTNESS_PATH/$BRIGHTNESS_VAL"
 
