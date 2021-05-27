@@ -1,9 +1,24 @@
 {
     "url_list": [
-        ["Sublime Text Documentation", "https://www.sublimetext.com/docs/"],
-        ["Sublime Text Community Documentation", "https://docs.sublimetext.io/"],
-        ["Sublime Text API", "https://www.sublimetext.com/docs/api_reference.html"],
-        ["Sublime Text Package Control", "https://packagecontrol.io/"],
-        ["Sublime Text LSP", "https://lsp.sublimetext.io/"],
+        [
+            "Sublime Text Documentation",
+            "https://www.sublimetext.com/docs/"
+        ],
+        [
+            "Sublime Text Community Documentation",
+            "https://docs.sublimetext.io/"
+        ],
+        [
+            "Sublime Text API",
+            "https://www.sublimetext.com/docs/api_reference.html"
+        ],
+        [
+            "Sublime Text Package Control",
+            "https://packagecontrol.io/"
+        ],
+        [
+            "Sublime Text LSP",
+            "https://lsp.sublimetext.io/"
+        ]
     ]
 }

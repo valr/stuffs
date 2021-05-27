@@ -6,7 +6,9 @@
         },
         "pylsp": {
             "enabled": true,
-            "command": ["pylsp"],
+            "command": [
+                "pylsp"
+            ],
             "selector": "source.python",
             "settings": {
                 "pylsp.env": {

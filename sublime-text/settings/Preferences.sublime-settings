@@ -10,8 +10,7 @@
 	"font_size": 10.5,
 	"git_diff_target": "head",
 	"highlight_modified_tabs": true,
-	"indent_guide_options":
-	[
+	"indent_guide_options": [
 		"draw_normal",
 		"solid"
 	],
@@ -30,8 +29,7 @@
 	"monokai_pro_sidebar_row_padding": 4,
 	"monokai_pro_ui_font_face": "DejaVu Sans",
 	"preview_on_click": "only_left",
-	"rulers":
-	[
+	"rulers": [
 		80
 	],
 	"scroll_past_end": false,
@@ -41,9 +39,8 @@
 	"show_tab_close_buttons": false,
 	"theme": "Monokai Classic.sublime-theme",
 	"translate_tabs_to_spaces": true,
-	"word_wrap": "false",
-	"ignored_packages":
-	[
+	"word_wrap": false,
+	"ignored_packages": [
 		"Vintage",
 	],
 }
