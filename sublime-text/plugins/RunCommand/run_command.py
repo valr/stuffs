@@ -24,7 +24,7 @@ class ArgumentInputHandler(sublime_plugin.TextInputHandler):
 
     def initial_text(self):
         try:
-            return self.arguments[0][self.arguments[0].rindex("|")+1:-1]
+            return self.arguments[0][self.arguments[0].rindex("|") + 1:-1]
         except ValueError:
             return ""
 
