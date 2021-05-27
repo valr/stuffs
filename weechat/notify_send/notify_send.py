@@ -6,7 +6,7 @@ options = {
     "notification_urgency": ("normal", "urgency level of the notification"),
     "notification_timeout": ("10000", "timeout of the notification (in milliseconds)"),
     "notification_application_name": ("weechat", "application name of the notification icon"),
-    "notification_icon":  ("weechat", "icon of the notification")
+    "notification_icon": ("weechat", "icon of the notification")
 }
 
 
