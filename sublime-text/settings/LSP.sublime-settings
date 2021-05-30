@@ -19,6 +19,8 @@
                 ],
                 "pylsp.plugins.autopep8.enabled": true,
                 "pylsp.plugins.flake8.enabled": true,
+                "pylsp.plugins.jedi_completion.enabled": true,
+                "pylsp.plugins.jedi_completion.fuzzy": true,
                 "pylsp.plugins.pycodestyle.enabled": false,
                 "pylsp.plugins.pydocstyle.enabled": false,
                 "pylsp.plugins.pyflakes.enabled": false,
