@@ -10,7 +10,8 @@ if [[ "$PWD" != *"$SOURCE" ]]; then
 fi
 
 # plugins
-for PLUGIN in "MarkdownToHtml" "OpenUrl" "RunCommand" "RunOnEvent" "SwitchPanel"
+for PLUGIN in "DiffText" \
+    "MarkdownToHtml" "OpenUrlPanel" "RunCommand" "RunOnEvent" "SwitchPanel"
 do
     rm -f "$TARGET/$PLUGIN"
     ln -s "$PWD/plugins/$PLUGIN" "$TARGET/$PLUGIN"
@@ -19,8 +20,11 @@ done
 # settings
 for SETTING in "Default (Linux).sublime-keymap" \
     "Default.sublime-commands" "Distraction Free.sublime-settings" \
-    "LSP.sublime-settings" "Package Control.sublime-settings" \
-    "Preferences.sublime-settings" "Terminal.sublime-settings"
+    "JSON.sublime-settings" "LSP.sublime-settings" \
+    "Monokai.sublime-color-scheme" "PackageDev.sublime-settings" \
+    "Package Control.sublime-settings" "Preferences.sublime-settings" \
+    "SublimeLinter.sublime-settings" "Terminal.sublime-settings" \
+    "XML.sublime-settings"
 do
     rm -f "$TARGET/User/$SETTING"
     ln -s "$PWD/settings/$SETTING" "$TARGET/User/$SETTING"
