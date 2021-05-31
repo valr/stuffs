@@ -27,7 +27,7 @@
                 "pylsp.plugins.pylint.enabled": false,
                 "pylsp.plugins.rope_completion.enabled": false,
                 "pylsp.plugins.rope_rename.enabled": false,
-                "pylsp.plugins.yapf.enabled": false
+                "pylsp.plugins.yapf.enabled": false,
             }
         }
     }

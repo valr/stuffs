@@ -9,7 +9,9 @@
         // },
         "flake8": {
             // "args": ["--ignore=E402"],
-            "args": ["--max-line-length=120"],
+            "args": [
+                "--max-line-length=120"
+            ],
             "python": 3.9
         },
         "json": {
@@ -23,14 +25,18 @@
             "priority": 1,
             "scope": "region.orangish",
             "icon": "warning",
-            "types": ["warning"]
+            "types": [
+                "warning"
+            ]
         },
         {
             "mark_style": "none",
             "priority": 1,
             "scope": "region.redish",
             "icon": "error",
-            "types": ["error"]
+            "types": [
+                "error"
+            ]
         }
     ]
 }

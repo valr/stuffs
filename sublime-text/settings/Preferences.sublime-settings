@@ -6,6 +6,7 @@
 	"copy_with_empty_selection": false,
 	"drag_text": false,
 	"draw_minimap_border": true,
+	"ensure_newline_at_eof_on_save": true,
 	"font_face": "DejaVu Sans Mono",
 	"font_size": 10.5,
 	"git_diff_target": "head",
