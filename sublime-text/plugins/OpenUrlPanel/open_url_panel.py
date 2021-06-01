@@ -8,8 +8,8 @@ class OpenUrlPanelCommand(sublime_plugin.WindowCommand):
         items = settings.get("url_list", [])
 
         self.window.show_quick_panel(
-            items, lambda id: self.on_done(id, items),
-            sublime.KEEP_OPEN_ON_FOCUS_LOST)
+            items, lambda id: self.on_done(id, items), sublime.KEEP_OPEN_ON_FOCUS_LOST
+        )
 
     def on_done(self, id, items):
         if id >= 0:

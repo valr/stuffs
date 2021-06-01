@@ -18,13 +18,13 @@ class ArgumentInputHandler(sublime_plugin.TextInputHandler):
         # arg_xxx = argument name
         # yyy = argument default value (optional)
         try:
-            return self.arguments[0][6:self.arguments[0].rindex("|")]
+            return self.arguments[0][6 : self.arguments[0].rindex("|")]
         except ValueError:
             return self.arguments[0][6:-1]
 
     def initial_text(self):
         try:
-            return self.arguments[0][self.arguments[0].rindex("|") + 1:-1]
+            return self.arguments[0][self.arguments[0].rindex("|") + 1 : -1]
         except ValueError:
             return ""
 
@@ -35,9 +35,13 @@ class ArgumentInputHandler(sublime_plugin.TextInputHandler):
         self.value = text
 
     def next_input(self, args):
-        return ArgumentInputHandler(
-            self.command.replace(self.arguments[0], self.value),
-            self.arguments[1:]) if len(self.arguments) > 1 else None
+        return (
+            ArgumentInputHandler(
+                self.command.replace(self.arguments[0], self.value), self.arguments[1:]
+            )
+            if len(self.arguments) > 1
+            else None
+        )
 
 
 class CommandInputHandler(sublime_plugin.TextInputHandler):
@@ -108,10 +112,14 @@ class RunCommandCommand(sublime_plugin.TextCommand):
     def run_command(self, command, cwd, timeout, edit, region, target):
         try:
             process = subprocess.Popen(
-                command, bufsize=-1, cwd=cwd, shell=True,
+                command,
+                bufsize=-1,
+                cwd=cwd,
+                shell=True,
                 stdin=subprocess.PIPE,
                 stdout=subprocess.PIPE,
-                stderr=subprocess.PIPE)
+                stderr=subprocess.PIPE,
+            )
 
             stdin = self.view.substr(region).encode("utf-8") if region else b""
             stdout, stderr = process.communicate(stdin, timeout)
