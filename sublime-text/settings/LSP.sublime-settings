@@ -17,17 +17,19 @@
                 "pylsp.configurationSources": [
                     "flake8"
                 ],
-                "pylsp.plugins.autopep8.enabled": true,
-                "pylsp.plugins.flake8.enabled": true,
                 "pylsp.plugins.jedi_completion.enabled": true,
                 "pylsp.plugins.jedi_completion.fuzzy": true,
                 "pylsp.plugins.pycodestyle.enabled": false,
                 "pylsp.plugins.pydocstyle.enabled": false,
                 "pylsp.plugins.pyflakes.enabled": false,
                 "pylsp.plugins.pylint.enabled": false,
+                "pylsp.plugins.flake8.enabled": true,
                 "pylsp.plugins.rope_completion.enabled": false,
                 "pylsp.plugins.rope_rename.enabled": false,
+                "pylsp.plugins.autopep8.enabled": false,
                 "pylsp.plugins.yapf.enabled": false,
+                "pylsp.plugins.pyls_black.enabled": true,
+                "pylsp.plugins.pyls_isort.enabled": true,
             }
         }
     }
