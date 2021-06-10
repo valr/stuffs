@@ -1,3 +1,5 @@
+import time
+
 import weechat
 
 options = {
@@ -7,7 +9,7 @@ options = {
         "send a notification on highlighted channel message",
     ),
     "notification_urgency": ("normal", "urgency level of the notification"),
-    "notification_timeout": ("10000", "timeout of the notification (in milliseconds)"),
+    "notification_timeout": ("5000", "timeout of the notification (in milliseconds)"),
     "notification_application_name": (
         "weechat",
         "application name of the notification icon",
@@ -16,20 +18,21 @@ options = {
 }
 
 
-def print_cb(data, _buffer, date, tags, displayed, highlight, prefix, message):
+def print_cb(start_time, _buffer, _time, tags, displayed, highlight, prefix, message):
     buffer_type = weechat.buffer_get_string(_buffer, "localvar_type")
     buffer_name = weechat.buffer_get_string(_buffer, "localvar_channel")
 
     if (
         weechat.config_get_plugin("notify_private_message") == "on"
         and buffer_type == "private"
+        and int(_time) > int(start_time)
+        and "self_msg" not in tags.split(",")
     ):
-        self_msg = [tag for tag in tags.split(",") if tag == "self_msg"]
-        if not self_msg:
-            notify_send(f"{buffer_name}:", message)
+        notify_send(f"{buffer_name}:", message)
     elif (
         weechat.config_get_plugin("notify_highlighted_message") == "on"
         and buffer_type == "channel"
+        and int(_time) > int(start_time)
         and int(highlight)
     ):
         notify_send(f"{prefix}@{buffer_name}:", message)
@@ -52,7 +55,7 @@ def notify_send(origin, message):
             "arg9": origin,
             "arg10": message,
         },
-        10000,
+        5000,
         "notify_send_cb",
         "",
     )
@@ -79,7 +82,7 @@ if __name__ == "__main__":
     weechat.register(
         "notify_send",
         "valr",
-        "0.3",
+        "0.4",
         "GPL3",
         "a highlight & private messages notification script",
         "",
@@ -91,4 +94,4 @@ if __name__ == "__main__":
             weechat.config_set_plugin(option, value)
             weechat.config_set_desc_plugin(option, description)
 
-    weechat.hook_print("", "", "", 1, "print_cb", "")
+    weechat.hook_print("", "", "", 1, "print_cb", str(int(time.time())))
