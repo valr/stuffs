@@ -7,7 +7,7 @@ Copy the script in the autoload Python directory of WeeChat:
 
 ## Configuration
 
-If required, adapt the script options e.g. using /fset.  
+If required, adapt the script options using /fset  
 **Options**: plugins.var.python.notify_send.\*
 
 ## Usage
