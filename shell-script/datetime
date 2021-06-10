@@ -1,5 +1,5 @@
 #!/bin/bash
 
-DATETIME=$(date +'%A %d %B %Y, %R')
+DATETIME=$(date +'%A %d %B %Y, %T')
 
-notify-send -u normal -t 5000 -a datetime "${DATETIME}"
+notify-send -u normal -t 3000 -a datetime "${DATETIME}"
