@@ -5,6 +5,18 @@
         }
     ],
     "settings": {
-        "lsp_format_on_save": true
+        "lsp_format_on_save": true,
+        "open_url_panel": {
+            "url_list": [
+                [
+                    "WeeChat Scripting Guide",
+                    "https://weechat.org/files/doc/stable/weechat_scripting.en.html"
+                ],
+                [
+                    "WeeChat Plugin API",
+                    "https://weechat.org/files/doc/stable/weechat_plugin_api.en.html"
+                ]
+            ]
+        }
     }
 }
