@@ -72,58 +72,62 @@ class MarkdownToHtml(sublime_plugin.EventListener):
         head = """
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css" integrity="sha512-Oy18vBnbSJkXTndr2n6lDMO5NN31UljR8e/ICzVPrGpSud4Gkckb8yUpqhKuUNoE+o9gAb4O/rAxxw1ojyUVzg==" crossorigin="anonymous" />
-    <title>Markdown to HTML</title>
-    <style>
-      .markdown-body {
-        box-sizing: border-box;
-        min-width: 200px;
-        max-width: 980px;
-        margin: 0 auto;
-        padding: 45px;
-      }
 
-      @media (max-width: 767px) {
-        .markdown-body {
-          padding: 15px;
-        }
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css"
+    integrity="sha512-Oy18vBnbSJkXTndr2n6lDMO5NN31UljR8e/ICzVPrGpSud4Gkckb8yUpqhKuUNoE+o9gAb4O/rAxxw1ojyUVzg=="
+    crossorigin="anonymous" />
+  <title>Markdown to HTML</title>
+  <style>
+    .markdown-body {
+      box-sizing: border-box;
+      margin: 0 auto;
+      max-width: 980px;
+      min-width: 200px;
+      padding: 45px;
+    }
+
+    @media (max-width: 767px) {
+      .markdown-body {
+        padding: 15px;
       }
-    </style>
-  </head>
-  <body>
-    <article class="markdown-body">
+    }
+  </style>
+</head>
+
+<body>
+  <article class="markdown-body">
 """
 
         tail = """
-    </article>
-    <script>
-      var reload = false;
+  </article>
+  <script>
+    var reload = false;
 
-      function focus() {
-        if (reload == true) {
-          // this seems to trigger the reload with chromium
-          window.location.href = window.location.href;
-          window.location.reload(true);
-        }
-      }
-
-      function blur() {
-        reload = true;
-      }
-      function click() {
+    function focus() {
+      if (reload == true) {
+        // this seems to trigger the reload with chromium
+        window.location.href = window.location.href;
         window.location.reload(true);
       }
+    }
 
-      window.addEventListener("focus", focus);
-      window.addEventListener("blur", blur);
-      window.addEventListener("click", click);
-    </script>
-  </body>
+    function blur() {
+      reload = true;
+    }
+    function click() {
+      window.location.reload(true);
+    }
+
+    window.addEventListener("focus", focus);
+    window.addEventListener("blur", blur);
+    window.addEventListener("click", click);
+  </script>
+</body>
+
 </html>
 """
 
