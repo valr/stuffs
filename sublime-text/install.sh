@@ -26,6 +26,7 @@ for SETTING in "Default (Linux).sublime-keymap" \
     "Default.sublime-commands" \
     "Distraction Free.sublime-settings" \
     "LSP.sublime-settings" \
+    "LSP-pylsp.sublime-settings" \
     "Monokai.sublime-color-scheme" \
     "PackageDev.sublime-settings" \
     "Package Control.sublime-settings" \
