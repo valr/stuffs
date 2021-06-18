@@ -1,36 +1,3 @@
 {
-    "show_diagnostics_count_in_view_status": true,
-    "clients": {
-        "clangd": {
-            "enabled": true
-        },
-        "pylsp": {
-            "enabled": true,
-            "command": [
-                "pylsp"
-            ],
-            "selector": "source.python",
-            "settings": {
-                "pylsp.env": {
-                    "PYTHONPATH": "/opt/sublime_text/Lib/python38"
-                },
-                "pylsp.configurationSources": [
-                    "flake8"
-                ],
-                "pylsp.plugins.jedi_completion.enabled": true,
-                "pylsp.plugins.jedi_completion.fuzzy": true,
-                "pylsp.plugins.pycodestyle.enabled": false,
-                "pylsp.plugins.pydocstyle.enabled": false,
-                "pylsp.plugins.pyflakes.enabled": false,
-                "pylsp.plugins.pylint.enabled": false,
-                "pylsp.plugins.flake8.enabled": true,
-                "pylsp.plugins.rope_completion.enabled": false,
-                "pylsp.plugins.rope_rename.enabled": false,
-                "pylsp.plugins.autopep8.enabled": false,
-                "pylsp.plugins.yapf.enabled": false,
-                "pylsp.plugins.pyls_black.enabled": true,
-                "pylsp.plugins.pyls_isort.enabled": true,
-            }
-        }
-    }
+    "show_diagnostics_count_in_view_status": true
 }
