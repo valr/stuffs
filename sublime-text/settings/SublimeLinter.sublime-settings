@@ -1,24 +1,18 @@
-// SublimeLinter Settings - User
 {
     "linters": {
-        // "pydocstyle": {
-        //     "ignore": "D100,D101,D102,D103,D104,D105",
-        // },
-        // "pep8": {
-        //     // "ignore": "E501"
-        // },
-        "flake8": {
-            // "args": ["--ignore=E402"],
-            "args": [
-                "--max-line-length=120"
-            ],
-            "python": 3.9
+        "htmltidy": {
+            "selector": "text.html"
         },
         "json": {
             "strict": false
         }
     },
     "gutter_theme": "Packages/Theme - Monokai Pro/Monokai Pro.gutter-theme",
+    "paths": {
+        "linux": [
+            "~/.local/bin"
+        ],
+    },
     "styles": [
         {
             "mark_style": "none",
