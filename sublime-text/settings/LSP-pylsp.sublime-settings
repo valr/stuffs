@@ -1,0 +1,22 @@
+{
+    "settings": {
+        "pylsp.configurationSources": [
+            "flake8"
+        ],
+        "pylsp.plugins.jedi_completion.enabled": true,
+        "pylsp.plugins.jedi_completion.fuzzy": true,
+        "pylsp.plugins.pycodestyle.enabled": false,
+        "pylsp.plugins.pydocstyle.enabled": false,
+        "pylsp.plugins.pyflakes.enabled": false,
+        "pylsp.plugins.pylint.enabled": false,
+        "pylsp.plugins.flake8.enabled": true,
+        "pylsp.plugins.flake8.maxLineLength": 88,
+        "pylsp.plugins.autopep8.enabled": false,
+        "pylsp.plugins.yapf.enabled": false,
+        "pylsp.plugins.pylsp_black.enabled": true,
+        "pylsp.plugins.pyls_isort.enabled": true,
+        "pylsp.plugins.mypy_ls.enabled": false,
+        "pylsp.plugins.mypy-ls.live_mode": true,
+        "pylsp.plugins.mypy-ls.strict": false,
+    }
+}
