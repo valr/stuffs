@@ -1,0 +1,5 @@
+Source of syntax files:
+
+Gettext https://github.com/textmate/gettext.tmbundle/blob/master/Syntaxes/Gettext.tmLanguage
+Jinja   https://github.com/Sublime-Instincts/BetterJinja/blob/master/resources/syntax/Jinja.sublime-syntax
+Meson   based on https://github.com/TingPing/language-meson
