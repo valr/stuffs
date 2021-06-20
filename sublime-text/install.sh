@@ -40,6 +40,7 @@ done
 
 # language syntaxes
 for SYNTAX in "Gettext.tmLanguage" \
+    "Jinja.sublime-syntax" \
     "Meson.tmLanguage"
 do
     rm -f "$TARGET/User/$SYNTAX"
