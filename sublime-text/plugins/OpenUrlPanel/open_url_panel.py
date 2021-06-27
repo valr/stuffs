@@ -15,6 +15,8 @@ class OpenUrlPanelCommand(sublime_plugin.WindowCommand):
                 .get("url_list", [])
             )
 
+        items = sorted(items, key=lambda i: i[0])
+
         self.window.show_quick_panel(
             items, lambda id: self.on_done(id, items), sublime.KEEP_OPEN_ON_FOCUS_LOST
         )
