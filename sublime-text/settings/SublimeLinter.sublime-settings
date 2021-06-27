@@ -1,7 +1,14 @@
 {
     "linters": {
+        "csslint": {
+            "excludes": [
+                "*.jinja"
+            ]
+        },
         "htmltidy": {
-            "selector": "text.html"
+            "excludes": [
+                "*.jinja"
+            ]
         },
         "json": {
             "strict": false
