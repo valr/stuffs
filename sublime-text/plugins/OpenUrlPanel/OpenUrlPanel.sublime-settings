@@ -19,6 +19,10 @@
         [
             "Sublime Text LSP",
             "https://lsp.sublimetext.io/"
+        ],
+        [
+            "Sublime Text Linter",
+            "http://www.sublimelinter.com/"
         ]
     ]
 }
