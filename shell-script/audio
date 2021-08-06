@@ -1,11 +1,11 @@
 #!/bin/bash
 
 case "$1" in
-    +) amixer -q -M set Master 3%+ ;;
-    -) amixer -q -M set Master 3%- ;;
-    m) amixer -q set Master toggle ;;
-    c) amixer -q set Capture toggle; exit 0 ;;
-    *) exit 1 ;;
+  +) amixer -q -M set Master 3%+ ;;
+  -) amixer -q -M set Master 3%- ;;
+  m) amixer -q set Master toggle ;;
+  c) amixer -q set Capture toggle; exit 0 ;;
+  *) exit 1 ;;
 esac
 
 VOL=$(amixer -M get Master | awk -F"[][]" '/dB/ { printf "volume: %s", $2; if ($6=="off") print " (muet)" }')

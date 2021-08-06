@@ -1,8 +1,8 @@
 #!/bin/bash
 
 if [ $(id -u) != 0 ]; then
-    echo "this script should be run as root."
-    exit 1
+  echo "this script should be run as root."
+  exit 1
 fi
 
 WIRELESS="wlp3s0"
