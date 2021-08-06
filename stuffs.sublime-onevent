@@ -4,12 +4,12 @@ export PATH="/bin:/sbin:/usr/bin:/usr/sbin"
 export LC_ALL=C
 
 on_post_save() {
-    case "$SYNTAX" in
-        Python)
-            # /bin/autopep8 -i --max-line-length 120 "$FILENAME"
-            # /bin/isort "$FILENAME"
-            ;;
-    esac
+  case "$SYNTAX" in
+    Python)
+      # /bin/autopep8 -i --max-line-length 120 "$FILENAME"
+      # /bin/isort "$FILENAME"
+      ;;
+  esac
 }
 
 EVENT="$1"
@@ -17,10 +17,10 @@ SYNTAX="$2"
 FILENAME="$3"
 
 case "$EVENT" in
-    on_post_save)
-        on_post_save
-        ;;
-    *)
-        /bin/logger --tag 'sublime-command' "event=$EVENT, syntax=$SYNTAX, filename=$FILENAME"
-        ;;
+  on_post_save)
+    on_post_save
+    ;;
+  *)
+    /bin/logger --tag 'sublime-command' "event=$EVENT, syntax=$SYNTAX, filename=$FILENAME"
+    ;;
 esac
