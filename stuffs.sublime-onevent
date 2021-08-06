@@ -1,5 +1,8 @@
 #!/bin/bash
 
+export PATH="/bin:/sbin:/usr/bin:/usr/sbin"
+export LC_ALL=C
+
 on_post_save() {
     case "$SYNTAX" in
         Python)
