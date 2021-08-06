@@ -3,10 +3,10 @@
 # change brightness using xbacklight
 
 case "$1" in
-  [0-9]*) xbacklight -set "$1" ;;
-  +) xbacklight -inc 5 ;;
-  -) xbacklight -dec 5 ;;
-  *) exit 1 ;;
+    [0-9]*) xbacklight -set "$1" ;;
+    +) xbacklight -inc 5 ;;
+    -) xbacklight -dec 5 ;;
+    *) exit 1 ;;
 esac
 
 PERCENT="$(xbacklight -get | cut -d'.' -f1)"
@@ -27,10 +27,10 @@ VAL=$(cat "$BRIGHTNESS_PATH/$BRIGHTNESS_VAL")
 OLD=$(( VAL * 100 / MAX ))
 
 case "$1" in
-  [0-9]*) NEW=$1 ;;
-  +) NEW=$(( OLD + 5 )) ;;
-  -) NEW=$(( OLD - 5 )) ;;
-  *) exit 1 ;;
+    [0-9]*) NEW=$1 ;;
+    +) NEW=$(( OLD + 5 )) ;;
+    -) NEW=$(( OLD - 5 )) ;;
+    *) exit 1 ;;
 esac
 
 NEW=$(( NEW <= 100 ? NEW : 100 ))
