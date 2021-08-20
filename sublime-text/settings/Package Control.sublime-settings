@@ -2,6 +2,7 @@
 	"bootstrapped": true,
 	"in_process_packages": [
 	],
+	"install_missing": false,
 	"installed_packages": [
 		"BracketHighlighter",
 		"LSP",
