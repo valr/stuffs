@@ -5,6 +5,7 @@
 	"install_missing": false,
 	"installed_packages": [
 		"BracketHighlighter",
+		"FileDiffs",
 		"Generic Config",
 		"LSP",
 		"LSP-bash",
