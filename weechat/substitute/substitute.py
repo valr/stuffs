@@ -23,13 +23,9 @@ def substitute(data, line):
     replacement = weechat.config_get_plugin("replacement")
 
     if line["buffer_name"] in buffer_list.split(","):
-        nick = [
-            tag[len("nick_") :]
-            for tag in line["tags"].split(",")
-            if tag.startswith("nick_")
-        ]
-        if nick and nick[0] in nick_list.split(","):
-            return {"message": re.sub(pattern, replacement, line["message"])}
+        for tag in line["tags"].split(","):
+            if tag.startswith("nick_") and tag[len("nick_") :] in nick_list.split(","):
+                return {"message": re.sub(pattern, replacement, line["message"])}
 
     return {}
 
