@@ -34,7 +34,7 @@ if __name__ == "__main__":
         "valr",
         "0.2",
         "GPL3",
-        "a script using regex to substitute text in message (per channel & nick)",
+        "a script using regex to substitute text in message (per buffer & nick)",
         "",
         "",
     )
