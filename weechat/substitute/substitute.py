@@ -7,7 +7,7 @@ options = {
         "",
         "comma separated list of buffers where substitution will be done",
     ),
-    "nick_list": (
+    "nicklist": (
         "",
         "comma separated list of nicks for which substitution will be done",
     ),
@@ -17,15 +17,13 @@ options = {
 
 
 def substitute(data, line):
-    buffer_list = weechat.config_get_plugin("buffer_list")
-    nick_list = weechat.config_get_plugin("nick_list")
+    nicklist = weechat.config_get_plugin("nicklist")
     pattern = weechat.config_get_plugin("pattern")
     replacement = weechat.config_get_plugin("replacement")
 
-    if line["buffer_name"] in buffer_list.split(","):
-        for tag in line["tags"].split(","):
-            if tag.startswith("nick_") and tag[len("nick_") :] in nick_list.split(","):
-                return {"message": re.sub(pattern, replacement, line["message"])}
+    for tag in line["tags"].split(","):
+        if tag.startswith("nick_") and tag[len("nick_") :] in nicklist.split(","):
+            return {"message": re.sub(pattern, replacement, line["message"])}
 
     return {}
 
@@ -34,7 +32,7 @@ if __name__ == "__main__":
     weechat.register(
         "substitute",
         "valr",
-        "0.1",
+        "0.2",
         "GPL3",
         "a script using regex to substitute text in message (per channel & nick)",
         "",
@@ -46,4 +44,5 @@ if __name__ == "__main__":
             weechat.config_set_plugin(option, value)
             weechat.config_set_desc_plugin(option, description)
 
-    weechat.hook_line("", "", "", "substitute", "")
+    buffer_list = weechat.config_get_plugin("buffer_list")
+    weechat.hook_line("", buffer_list, "", "substitute", "")
