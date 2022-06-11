@@ -4,7 +4,7 @@ import weechat
 
 options = {
     "buffer_list": (
-        "",
+        "!*",
         "comma separated list of buffers where substitution will be done",
     ),
     "nicklist": (
