@@ -1,3 +1,4 @@
 {
-    "show_diagnostics_count_in_view_status": true
+    "show_diagnostics_count_in_view_status": true,
+    "show_inlay_hints": true
 }
