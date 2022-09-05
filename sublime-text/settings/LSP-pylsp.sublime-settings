@@ -9,7 +9,7 @@
         "pylsp.plugins.pydocstyle.enabled": false,
         "pylsp.plugins.pyflakes.enabled": false,
         "pylsp.plugins.pylint.enabled": false,
-        "pylsp.plugins.pylsp_mypy.enabled": true,
+        "pylsp.plugins.pylsp_mypy.enabled": false,
         "pylsp.plugins.flake8.maxLineLength": 88,
         "pylsp.plugins.autopep8.enabled": false,
         "pylsp.plugins.yapf.enabled": false,
