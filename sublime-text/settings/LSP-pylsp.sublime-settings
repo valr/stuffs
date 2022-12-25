@@ -14,6 +14,6 @@
         "pylsp.plugins.autopep8.enabled": false,
         "pylsp.plugins.yapf.enabled": false,
         "pylsp.plugins.pylsp_black.enabled": true,
-        "pylsp.plugins.pyls_isort.enabled": true,
+        "pylsp.plugins.pyls_isort.enabled": true
     }
 }

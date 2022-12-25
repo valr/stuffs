@@ -1,3 +1,1 @@
-[
-    { "keys": ["f1"], "command": "open_url_panel" }
-]
+[{ "keys": ["f1"], "command": "open_url_panel" }]

@@ -1,6 +1,4 @@
 {
-	"spell_check": false,
-	"rulers": [
-		72
-	],
+    "spell_check": false,
+    "rulers": [72]
 }

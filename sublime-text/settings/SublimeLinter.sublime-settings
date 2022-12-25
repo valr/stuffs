@@ -1,23 +1,17 @@
 {
     "linters": {
         "csslint": {
-            "excludes": [
-                "*.jinja"
-            ]
+            "excludes": ["*.jinja"]
         },
         "htmltidy": {
-            "excludes": [
-                "*.jinja"
-            ]
+            "excludes": ["*.jinja"]
         },
         "json": {
             "strict": false
         }
     },
     "paths": {
-        "linux": [
-            "~/.local/bin"
-        ],
+        "linux": ["~/.local/bin"]
     },
     "gutter_theme": "Packages/Theme - Monokai Pro/Monokai Pro.gutter-theme",
     "styles": [
@@ -26,18 +20,14 @@
             "priority": 1,
             "scope": "region.orangish",
             "icon": "warning",
-            "types": [
-                "warning"
-            ]
+            "types": ["warning"]
         },
         {
             "mark_style": "none",
             "priority": 1,
             "scope": "region.redish",
             "icon": "error",
-            "types": [
-                "error"
-            ]
+            "types": ["error"]
         }
     ]
 }

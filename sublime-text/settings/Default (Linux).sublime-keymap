@@ -46,64 +46,102 @@
     { "keys": ["ctrl+g"], "command": "find_under_expand" },
     { "keys": ["ctrl+shift+g"], "command": "find_under_expand_skip" },
     { "keys": ["ctrl+l"], "command": "split_selection_into_lines" },
-    { "keys": ["ctrl+p"], "command": "show_overlay", "args": {"overlay": "command_palette"} },
+    {
+        "keys": ["ctrl+p"],
+        "command": "show_overlay",
+        "args": { "overlay": "command_palette" }
+    },
     { "keys": ["ctrl+shift+p"], "command": "prompt_select_workspace" },
 
-    { "keys": ["alt+a"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true} },
+    {
+        "keys": ["alt+a"],
+        "command": "show_overlay",
+        "args": { "overlay": "goto", "show_files": true }
+    },
     { "keys": ["alt+d"], "command": "goto_definition" },
-    { "keys": ["alt+l"], "command": "show_overlay", "args": {"overlay": "goto", "text": ":"} },
+    {
+        "keys": ["alt+l"],
+        "command": "show_overlay",
+        "args": { "overlay": "goto", "text": ":" }
+    },
     { "keys": ["alt+r"], "command": "goto_reference" },
-    { "keys": ["alt+s"], "command": "show_overlay", "args": {"overlay": "goto", "text": "@"} },
+    {
+        "keys": ["alt+s"],
+        "command": "show_overlay",
+        "args": { "overlay": "goto", "text": "@" }
+    },
     { "keys": ["alt+shift+s"], "command": "goto_symbol_in_project" },
-    { "keys": ["alt+t"], "command": "show_overlay", "args": {"overlay": "goto", "text": "#"} },
+    {
+        "keys": ["alt+t"],
+        "command": "show_overlay",
+        "args": { "overlay": "goto", "text": "#" }
+    },
 
     { "keys": ["f11"], "command": "toggle_distraction_free" },
     { "keys": ["ctrl+k", "ctrl+c"], "command": "toggle_comment" },
     { "keys": ["ctrl+k", "ctrl+d"], "command": "toggle_inline_diff" },
-    { "keys": ["ctrl+k", "ctrl+k"], "command": "toggle_comment", "args": { "block": true } },
+    {
+        "keys": ["ctrl+k", "ctrl+k"],
+        "command": "toggle_comment",
+        "args": { "block": true }
+    },
     { "keys": ["ctrl+k", "ctrl+m"], "command": "toggle_menu" },
 
     { "keys": ["ctrl+alt+p"], "command": "show_scope_name" },
 
     // modified key bindings (find/replace)
 
-    { "keys": ["alt+&"], "command": "toggle_regex", "context":
-        [
+    {
+        "keys": ["alt+&"],
+        "command": "toggle_regex",
+        "context": [
             { "key": "setting.is_widget", "operator": "equal", "operand": true }
         ]
     },
-    { "keys": ["alt+é"], "command": "toggle_case_sensitive", "context":
-        [
+    {
+        "keys": ["alt+é"],
+        "command": "toggle_case_sensitive",
+        "context": [
             { "key": "setting.is_widget", "operator": "equal", "operand": true }
         ]
     },
-    { "keys": ["alt+\""], "command": "toggle_whole_word", "context":
-        [
+    {
+        "keys": ["alt+\""],
+        "command": "toggle_whole_word",
+        "context": [
             { "key": "setting.is_widget", "operator": "equal", "operand": true }
         ]
     },
-    { "keys": ["alt+'"], "command": "toggle_wrap", "context":
-        [
+    {
+        "keys": ["alt+'"],
+        "command": "toggle_wrap",
+        "context": [
             { "key": "setting.is_widget", "operator": "equal", "operand": true }
         ]
     },
-    { "keys": ["alt+("], "command": "toggle_in_selection", "context":
-        [
+    {
+        "keys": ["alt+("],
+        "command": "toggle_in_selection",
+        "context": [
             { "key": "setting.is_widget", "operator": "equal", "operand": true }
         ]
     },
-    { "keys": ["alt+-"], "command": "toggle_highlight", "context":
-        [
+    {
+        "keys": ["alt+-"],
+        "command": "toggle_highlight",
+        "context": [
             { "key": "setting.is_widget", "operator": "equal", "operand": true }
         ]
     },
-    { "keys": ["alt+è"], "command": "toggle_preserve_case", "context":
-        [
+    {
+        "keys": ["alt+è"],
+        "command": "toggle_preserve_case",
+        "context": [
             { "key": "setting.is_widget", "operator": "equal", "operand": true }
         ]
     },
 
     // new key bindings
 
-    { "keys": ["ctrl+escape"], "command": "switch_panel" },
+    { "keys": ["ctrl+escape"], "command": "switch_panel" }
 ]
