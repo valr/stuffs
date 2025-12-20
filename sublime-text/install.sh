@@ -10,8 +10,7 @@ if [[ "$PWD" != *"$SOURCE" ]]; then
 fi
 
 # plugins
-for PLUGIN in "DiffText" \
-  "MarkdownToHtml" \
+for PLUGIN in "MarkdownToHtml" \
   "OpenUrlPanel" \
   "RunCommand" \
   "RunOnEvent" \
@@ -27,7 +26,6 @@ for SETTING in "Default (Linux).sublime-keymap" \
   "Distraction Free.sublime-settings" \
   "LSP.sublime-settings" \
   "LSP-pylsp.sublime-settings" \
-  "Monokai.sublime-color-scheme" \
   "PackageDev.sublime-settings" \
   "Package Control.sublime-settings" \
   "Preferences.sublime-settings" \
