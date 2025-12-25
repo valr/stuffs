@@ -13,8 +13,7 @@ fi
 for SETTING in "Commit Message.sublime-settings" \
   "Default (Linux).sublime-keymap" \
   "Diff.sublime-settings" \
-  "Preferences.sublime-settings"
-do
+  "Preferences.sublime-settings"; do
   rm -f "$TARGET/User/$SETTING"
   ln -s "$PWD/settings/$SETTING" "$TARGET/User/$SETTING"
 done
