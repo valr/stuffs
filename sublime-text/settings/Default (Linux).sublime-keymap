@@ -1,3 +1,21 @@
 [
-    { "keys": ["ctrl+escape"], "command": "switch_panel" }
+    {
+        "keys": [
+            "f1"
+        ],
+        "command": "open_url_panel"
+    },
+    {
+        "keys": [
+            "ctrl+escape"
+        ],
+        "command": "switch_panel"
+    },
+    {
+        "keys": [
+            "ctrl+l",
+            "ctrl+i"
+        ],
+        "command": "lsp_toggle_inlay_hints"
+    },
 ]

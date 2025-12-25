@@ -1,0 +1,17 @@
+{
+    // https://github.com/dracula/sublime/issues/32
+    // https://forum.sublimetext.com/t/remove-underline-from-variable-names/69011/3
+    "variables": {},
+    "globals": {},
+    "rules": [
+        {
+            "scope": "entity.name.class",
+            "font_style": ""
+        },
+        {
+            "scope": "meta.path",
+            "font_style": "",
+            "foreground": "#1F1F1F"
+        },
+    ]
+}

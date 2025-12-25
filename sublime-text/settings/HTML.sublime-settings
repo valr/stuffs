@@ -1,0 +1,4 @@
+{
+    // disabled as per LSP-css documentation
+    "disable_default_completions": true
+}

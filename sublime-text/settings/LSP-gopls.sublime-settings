@@ -1,0 +1,8 @@
+{
+    "gopls.vulncheck": "On",
+    "gopls.codelenses": {
+        "run_govulncheck": true,
+    },
+    "gopls.semanticTokens": true,
+    "gopls.gofumpt": true,
+}

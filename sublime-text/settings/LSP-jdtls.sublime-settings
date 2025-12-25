@@ -1,0 +1,5 @@
+{
+    "settings": {
+        "java.jdt.ls.java.home": "/usr/lib/jvm/java-25-openjdk",
+    },
+}
