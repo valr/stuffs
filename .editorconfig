@@ -1,0 +1,64 @@
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+indent_size = 4
+indent_style = space
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.{c,h}]
+indent_style = space
+indent_size = 4
+
+[*.css]
+indent_style = space
+indent_size = 2
+
+[*.go]
+indent_style = tab
+indent_size = 4
+
+[*.{htm,html}]
+indent_style = space
+indent_size = 2
+
+[*.java]
+indent_style = space
+indent_size = 4
+
+[*.{js,mjs,cjs}]
+indent_style = space
+indent_size = 2
+
+[Makefile]
+indent_style = tab
+indent_size = 4
+
+[*.md]
+indent_style = space
+indent_size = 2
+trim_trailing_whitespace = false
+
+[*.py]
+indent_style = space
+indent_size = 4
+
+[*.{sh,bash}]
+indent_style = space
+indent_size = 2
+space_redirects = true # shfmt
+switch_case_indent = true # shfmt
+
+[*.{ts,tsx,mts,cts}]
+indent_style = space
+indent_size = 2
+
+[*.{xml,xsd,dtd,xsl,xslt}]
+indent_style = space
+indent_size = 2
+
+[*.{yaml,yml,toml}]
+indent_style = space
+indent_size = 2
