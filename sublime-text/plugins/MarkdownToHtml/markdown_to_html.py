@@ -10,53 +10,48 @@ import sublime_plugin
 
 class MarkdownToHtml(sublime_plugin.EventListener):
     def __init__(self):
-        super(MarkdownToHtml, self).__init__()
+        super().__init__()
         self.lock = threading.Lock()
         self.text = {}
 
-    def on_post_save_async(self, view):
-        if not view.settings().get("syntax").endswith("Markdown.sublime-syntax"):
+    def on_post_save_async(self, view: sublime.View):
+        if not view.settings().get("syntax").endswith("Markdown.sublime-syntax"):  # type: ignore
             return
 
-        buff = view.buffer_id()
-        if buff not in self.text:
-            self.text[buff] = ""
-
-        text = view.substr(sublime.Region(0, view.size()))
-        if self.text[buff] == text:
-            return
+        buffer = view.buffer_id()
+        if buffer not in self.text:
+            self.text[buffer] = ""
 
         try:
             self.lock.acquire()
+            self.text[buffer] = view.substr(sublime.Region(0, view.size()))
 
-            filename = f"/tmp/sublimetext-{buff}.html"
+            filename = f"/tmp/sublimetext-{buffer}.html"
             fileexists = os.path.exists(filename)
 
             with open(filename, "w") as file:
-                file.write(self.html_page(self.html_body(text)))
+                file.write(self.html_page(self.html_body(self.text[buffer])))
 
             if not fileexists:
                 webbrowser.get("chromium").open_new_tab("file://" + filename)
-
-            self.text[buff] = text
         finally:
             self.lock.release()
 
-        view.window().status_message("Markdown rendered in HTML")
+        view.window().status_message("Markdown rendered in HTML")  # type: ignore
 
-    def on_close(self, view):
-        buff = view.buffer_id()
-        if buff in self.text:
-            del self.text[buff]
+    def on_close(self, view: sublime.View):
+        buffer = view.buffer_id()
+        if buffer in self.text:
+            del self.text[buffer]
 
-        filename = f"/tmp/sublimetext-{buff}.html"
+        filename = f"/tmp/sublimetext-{buffer}.html"
         if os.path.exists(filename):
             os.remove(filename)
 
-    def html_body(self, markdown):
+    def html_body(self, text: str):
         url = "https://api.github.com/markdown/raw"
         header = {"Content-Type": "text/plain"}
-        data = markdown.encode("utf-8")
+        data = text.encode("utf-8")
 
         try:
             request = Request(url, data, header, method="POST")
@@ -65,14 +60,13 @@ class MarkdownToHtml(sublime_plugin.EventListener):
             body = f"HTTP error {e.code}: {e.reason}"
         except URLError as e:
             body = f"URL error: {e.reason}"
-        finally:
-            return body
 
-    def html_page(self, body):
+        return body
+
+    def html_page(self, body: str):
         head = """
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -97,7 +91,6 @@ class MarkdownToHtml(sublime_plugin.EventListener):
     }
   </style>
 </head>
-
 <body>
   <article class="markdown-body">
 """
@@ -118,6 +111,7 @@ class MarkdownToHtml(sublime_plugin.EventListener):
     function blur() {
       reload = true;
     }
+
     function click() {
       window.location.reload(true);
     }
@@ -127,7 +121,6 @@ class MarkdownToHtml(sublime_plugin.EventListener):
     window.addEventListener("click", click);
   </script>
 </body>
-
 </html>
 """
 
