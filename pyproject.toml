@@ -1,0 +1,23 @@
+[tool.pyright]
+pythonVersion = "3.8"
+
+include = ["sublime-text"]
+exclude = ["**/__pycache__"]
+
+# linting handled by ruff
+reportUnusedImport = "none"
+reportUnusedClass = "none"
+reportUnusedFunction = "none"
+reportUnusedVariable = "none"
+
+[tool.ruff]
+target-version = "py38"
+
+extend-exclude = ["__pycache__"]
+line-length = 88
+
+[tool.ruff.lint]
+extend-select = ["I", "B", "UP"]
+ignore = [
+    "ANN", # typing handled by pyright
+]
