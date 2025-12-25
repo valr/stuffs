@@ -5,7 +5,9 @@
     "default_font_size": 12,
     "margin": 0,
     "mini_diff": "auto",
-    "rulers": [80],
+    "rulers": [
+        80
+    ],
     "translate_tabs_to_spaces": true,
     "word_wrap": false,
     "draw_minimap_border": true,
@@ -15,7 +17,10 @@
     // "line_padding_top": 1,
     // "line_padding_bottom": 1,
     "scroll_past_end": false,
-    "indent_guide_options": ["draw_normal", "solid"],
+    "indent_guide_options": [
+        "draw_normal",
+        "solid"
+    ],
     // "ensure_newline_at_eof_on_save": true,
     "shift_tab_unindent": true,
     "copy_with_empty_selection": false,
@@ -37,14 +42,7 @@
     "preview_on_click": "only_left",
     "console_max_history_lines": 10000,
     "index_files": true,
-    // "match_brackets": false,
-    // "match_brackets_angle": false,
-    // "match_brackets_braces": false,
-    // "match_brackets_content": false,
-    // "match_brackets_square": false,
-    // "match_tags": false,
-    "ignored_packages":
-    [
-		"Vintage",
+    "ignored_packages": [
+        "Vintage",
     ],
 }
