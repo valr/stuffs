@@ -1,3 +1,5 @@
+from typing import List, cast
+
 import sublime
 import sublime_plugin
 
@@ -5,7 +7,7 @@ import sublime_plugin
 class SwitchPanel(sublime_plugin.WindowCommand):
     def run(self):
         settings = sublime.load_settings("SwitchPanel.sublime-settings")
-        ignored_panels = settings.get("ignored_panels", [])
+        ignored_panels = cast(List[str], settings.get("ignored_panels", []))
 
         panels = [
             panel
@@ -21,9 +23,11 @@ class SwitchPanel(sublime_plugin.WindowCommand):
         self.window.run_command("show_panel", {"panel": panels[index_panel]})
         self.window.status_message("Switched to panel: " + panels[index_panel])
 
-    def is_empty(self, panel):
-        view = self.window.find_output_panel(panel.lstrip("output."))
+    def is_empty(self, panel: str) -> bool:
+        prefix = "output."
+        output_panel = panel[len(prefix) :] if panel.startswith(prefix) else panel
 
+        view = self.window.find_output_panel(output_panel)
         if view is not None:
             return not view.substr(sublime.Region(0, view.size())).strip()
 
