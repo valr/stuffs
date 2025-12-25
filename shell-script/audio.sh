@@ -4,7 +4,10 @@ case "$1" in
   +) amixer -q -M set Master 3%+ ;;
   -) amixer -q -M set Master 3%- ;;
   m) amixer -q set Master toggle ;;
-  c) amixer -q set Capture toggle; exit 0 ;;
+  c)
+    amixer -q set Capture toggle
+    exit 0
+    ;;
   *) exit 1 ;;
 esac
 

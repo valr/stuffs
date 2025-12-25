@@ -1,0 +1,43 @@
+#!/bin/bash
+
+export LC_ALL=C
+
+screenwidth=1600
+screenheight=900
+
+resizewidth=100
+resizeheight=100
+
+adjustmentwidth=2
+adjustmentheight=30
+
+window=$(xprop -root -f _NET_ACTIVE_WINDOW 0x " \$0\\n" _NET_ACTIVE_WINDOW | awk "{print \$2}")
+height=$(xwininfo -stats -id $window | sed -n 's/^  Height: \([0-9]\+\)$/\1/p')
+width=$(xwininfo -stats -id $window | sed -n 's/^  Width: \([0-9]\+\)$/\1/p')
+
+case "$1" in
+  moveup)
+    wmctrl -i -r $window -e 0,-1,0,-1,-1
+    ;;
+  moveleft)
+    wmctrl -i -r $window -e 0,0,-1,-1,-1
+    ;;
+  movedown)
+    wmctrl -i -r $window -e 0,-1,$((screenheight - adjustmentheight - height)),-1,-1
+    ;;
+  moveright)
+    wmctrl -i -r $window -e 0,$((screenwidth - adjustmentwidth - width)),-1,-1,-1
+    ;;
+  resizeup)
+    wmctrl -i -r $window -e 0,-1,-1,-1,$((height - resizeheight))
+    ;;
+  resizedown)
+    wmctrl -i -r $window -e 0,-1,-1,-1,$((height + resizeheight))
+    ;;
+  resizeleft)
+    wmctrl -i -r $window -e 0,-1,-1,$((width - resizewidth)),-1
+    ;;
+  resizeright)
+    wmctrl -i -r $window -e 0,-1,-1,$((width + resizewidth)),-1
+    ;;
+esac
