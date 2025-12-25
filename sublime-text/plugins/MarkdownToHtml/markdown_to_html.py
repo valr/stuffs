@@ -29,7 +29,7 @@ class MarkdownToHtml(sublime_plugin.EventListener):
         try:
             self.lock.acquire()
 
-            filename = "/tmp/sublimetext-{}.html".format(buff)
+            filename = f"/tmp/sublimetext-{buff}.html"
             fileexists = os.path.exists(filename)
 
             with open(filename, "w") as file:
@@ -49,7 +49,7 @@ class MarkdownToHtml(sublime_plugin.EventListener):
         if buff in self.text:
             del self.text[buff]
 
-        filename = "/tmp/sublimetext-{}.html".format(buff)
+        filename = f"/tmp/sublimetext-{buff}.html"
         if os.path.exists(filename):
             os.remove(filename)
 
@@ -62,9 +62,9 @@ class MarkdownToHtml(sublime_plugin.EventListener):
             request = Request(url, data, header, method="POST")
             body = urlopen(request).read().decode("utf-8")
         except HTTPError as e:
-            body = "HTTP error {}: {}".format(e.code, e.reason)
+            body = f"HTTP error {e.code}: {e.reason}"
         except URLError as e:
-            body = "URL error: {}".format(e.reason)
+            body = f"URL error: {e.reason}"
         finally:
             return body
 
