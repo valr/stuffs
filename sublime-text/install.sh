@@ -15,13 +15,6 @@ for BUILD in "exec_only_failed_output_build.py"; do
   ln -s "$PWD/build/$BUILD" "$TARGET/User/$BUILD"
 done
 
-# color schemes
-for SCHEME in "Dracula Pro (Alucard).sublime-color-scheme" \
-  "Dracula Pro.sublime-color-scheme"; do
-  rm -f "$TARGET/User/$SCHEME"
-  ln -s "$PWD/settings/$SCHEME" "$TARGET/User/$SCHEME"
-done
-
 # plugins
 for PLUGIN in "MarkdownToHtml" \
   "OpenUrlPanel" \
