@@ -10,7 +10,3 @@
 - Plugins (Markdown to HTML, Open URL Panel, Run Command, Run On Event, Switch Panel)
 - Settings files (My Configuration)
 - Syntax files (Gettext, Jinja, Meson)
-
-## WeeChat
-
-- Script (Notify Send)
