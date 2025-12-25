@@ -1,5 +1,4 @@
 *.sublime-workspace
 .venv/
 __pycache__/
-
 shell-script/administration.sh
