@@ -13,7 +13,7 @@
         "LSP": {
             "LSP-pyright": {
                 "settings": {
-                    "pyright.dev_environment": "sublime_text",
+                    "pyright.dev_environment": "sublime_text_38",
                 }
             }
         }
