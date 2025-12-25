@@ -1,10 +1,32 @@
 {
     "url_list": [
-        ["Sublime Text Documentation", "https://www.sublimetext.com/docs/"],
-        ["Sublime Text Community Documentation", "https://docs.sublimetext.io/"],
-        ["Sublime Text API", "https://www.sublimetext.com/docs/api_reference.html"],
-        ["Sublime Text Package Control", "https://packagecontrol.io/"],
-        ["Sublime Text LSP", "https://lsp.sublimetext.io/"],
-        ["Sublime Text Linter", "http://www.sublimelinter.com/"]
+        [
+            "Sublime Text Documentation",
+            "https://www.sublimetext.com/docs/"
+        ],
+        [
+            "Sublime Text Community-driven Documentation",
+            "https://docs.sublimetext.io/"
+        ],
+        [
+            "Sublime Text Packages",
+            "https://github.com/SublimeText/"
+        ],
+        [
+            "Sublime Text Package Control",
+            "https://packages.sublimetext.io/"
+        ],
+        [
+            "Sublime Text LSP",
+            "https://lsp.sublimetext.io/"
+        ],
+        [
+            "Sublime Text LSP-pyright Configuration",
+            "https://github.com/microsoft/pyright/blob/main/docs/configuration.md"
+        ],
+        [
+            "Sublime Text LSP-ruff Configuration",
+            "https://docs.astral.sh/ruff/"
+        ],
     ]
 }
