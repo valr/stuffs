@@ -12,16 +12,18 @@ class OpenUrlPanelCommand(sublime_plugin.WindowCommand):
     def run(self):
         settings = sublime.load_settings("OpenUrlPanel.sublime-settings")
         url_list = cast(List[List[str]], settings.get("url_list", []))
+        url_list.extend(cast(List[List[str]], settings.get("extend_url_list", [])))
+        sort = cast(bool, settings.get("sort", True))
 
         project_data = cast(Optional[ProjectData], self.window.project_data())
         if project_data:
-            url_list.extend(
-                project_data.get("settings", {})
-                .get("open_url_panel", {})
-                .get("url_list", [])
-            )
+            settings = project_data.get("settings", {}).get("open_url_panel", {})
+            url_list = settings.get("url_list", url_list)
+            url_list.extend(settings.get("extend_url_list", []))
+            sort = settings.get("sort", sort)
 
-        url_list = sorted(url_list, key=lambda x: x[0])
+        if sort:
+            url_list = sorted(url_list, key=lambda x: x[0])
 
         self.window.show_quick_panel(
             url_list,

@@ -1,4 +1,5 @@
 {
+    "sort": true,
     "url_list": [
         [
             "Sublime Text Homepage",
@@ -44,5 +45,6 @@
             "Sublime HQ on Github",
             "https://github.com/sublimehq/"
         ],
-    ]
+    ],
+    "extend_url_list": []
 }
