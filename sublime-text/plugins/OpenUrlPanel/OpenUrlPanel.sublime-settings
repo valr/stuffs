@@ -1,6 +1,14 @@
 {
     "url_list": [
         [
+            "Sublime Text Homepage",
+            "https://www.sublimetext.com/"
+        ],
+        [
+            "Sublime Text Forum",
+            "https://forum.sublimetext.com/"
+        ],
+        [
             "Sublime Text Documentation",
             "https://www.sublimetext.com/docs/"
         ],
@@ -9,7 +17,7 @@
             "https://docs.sublimetext.io/"
         ],
         [
-            "Sublime Text Packages",
+            "Sublime Text Community-maintained Packages on Github",
             "https://github.com/SublimeText/"
         ],
         [
@@ -17,16 +25,24 @@
             "https://packages.sublimetext.io/"
         ],
         [
-            "Sublime Text LSP",
+            "Sublime Text LSP Documentation",
             "https://lsp.sublimetext.io/"
         ],
         [
-            "Sublime Text LSP-pyright Configuration",
-            "https://github.com/microsoft/pyright/blob/main/docs/configuration.md"
+            "Sublime Merge Homepage",
+            "https://www.sublimemerge.com/"
         ],
         [
-            "Sublime Text LSP-ruff Configuration",
-            "https://docs.astral.sh/ruff/"
+            "Sublime Merge Forum",
+            "https://forum.sublimetext.com/c/sublime-merge/"
+        ],
+        [
+            "Sublime Merge Documentation",
+            "https://www.sublimemerge.com/docs/"
+        ],
+        [
+            "Sublime HQ on Github",
+            "https://github.com/sublimehq/"
         ],
     ]
 }

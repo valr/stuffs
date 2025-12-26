@@ -16,6 +16,18 @@
                     "pyright.dev_environment": "sublime_text_38",
                 }
             }
+        },
+        "open_url_panel": {
+            "url_list": [
+                [
+                    "Sublime Text LSP-pyright Configuration",
+                    "https://github.com/microsoft/pyright/blob/main/docs/configuration.md"
+                ],
+                [
+                    "Sublime Text LSP-ruff Configuration",
+                    "https://docs.astral.sh/ruff/"
+                ],
+            ]
         }
     }
 }
