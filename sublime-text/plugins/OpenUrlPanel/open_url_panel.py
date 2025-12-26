@@ -29,7 +29,6 @@ class OpenUrlPanelCommand(sublime_plugin.WindowCommand):
             settings = replace(settings, **{k: v for k, v in vars(project_settings).items() if v is not None})
 
         url_list = settings.url_list + settings.extend_url_list
-
         if settings.sort:
             url_list = sorted(url_list, key=lambda x: x[0])
 
