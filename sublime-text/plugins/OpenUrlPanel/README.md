@@ -6,7 +6,7 @@ When pressing the defined keybinding (default: f1), a panel will be displayed wi
 
 ## Settings
 
-The list of URLs can be defined globally in Package Settings ➔ OpenUrlPanel ➔ Settings.
+The list of URLs can be defined globally in Package Settings ➔ OpenUrlPanel ➔ Settings.  
 Additional URLs can be defined per project in the .sublime-project file, like this:
 
 ```json
