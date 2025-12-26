@@ -1,28 +1,36 @@
+from dataclasses import dataclass, replace
 from typing import Dict, List, Optional, cast
 
 import sublime
 import sublime_plugin
 
-UrlSettings = Dict[str, List[List[str]]]
-ProjectSettings = Dict[str, UrlSettings]
-ProjectData = Dict[str, ProjectSettings]
+
+@dataclass
+class GlobalSettings:
+    sort: bool
+    url_list: List[List[str]]
+    extend_url_list: List[List[str]]
+
+
+@dataclass
+class ProjectSettings:
+    sort: Optional[bool] = None
+    url_list: Optional[List[List[str]]] = None
+    extend_url_list: Optional[List[List[str]]] = None
 
 
 class OpenUrlPanelCommand(sublime_plugin.WindowCommand):
     def run(self):
-        settings = sublime.load_settings("OpenUrlPanel.sublime-settings")
-        url_list = cast(List[List[str]], settings.get("url_list", []))
-        url_list.extend(cast(List[List[str]], settings.get("extend_url_list", [])))
-        sort = cast(bool, settings.get("sort", True))
+        settings = GlobalSettings(**sublime.load_settings("OpenUrlPanel.sublime-settings").to_dict())
 
-        project_data = cast(Optional[ProjectData], self.window.project_data())
+        project_data = cast(Dict, self.window.project_data())
         if project_data:
-            settings = project_data.get("settings", {}).get("open_url_panel", {})
-            url_list = settings.get("url_list", url_list)
-            url_list.extend(settings.get("extend_url_list", []))
-            sort = settings.get("sort", sort)
+            project_settings = ProjectSettings(**project_data.get("settings", {}).get("open_url_panel", {}))
+            settings = replace(settings, **{k: v for k, v in vars(project_settings).items() if v is not None})
 
-        if sort:
+        url_list = settings.url_list + settings.extend_url_list
+
+        if settings.sort:
             url_list = sorted(url_list, key=lambda x: x[0])
 
         self.window.show_quick_panel(
