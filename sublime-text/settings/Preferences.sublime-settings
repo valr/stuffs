@@ -6,7 +6,8 @@
     "margin": 0,
     "mini_diff": "auto",
     "rulers": [
-        80
+        80,
+        120
     ],
     "translate_tabs_to_spaces": true,
     "word_wrap": false,
