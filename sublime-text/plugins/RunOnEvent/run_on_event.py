@@ -27,6 +27,4 @@ class RunOnEvent(sublime_plugin.EventListener):
         )
 
         if os.path.isfile(command):
-            subprocess.Popen(
-                [command, event, syntax, filename], cwd=os.path.dirname(filename)
-            )
+            subprocess.Popen([command, event, syntax, filename], cwd=os.path.dirname(filename))

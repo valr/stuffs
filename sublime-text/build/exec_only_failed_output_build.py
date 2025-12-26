@@ -10,7 +10,5 @@ class ExecOnlyFailedOutputBuildCommand(default_exec.ExecCommand):
 
         # auto-hide the build output panel on successful build
         exit_code = proc.exit_code()
-        if (
-            exit_code == 0 or exit_code is None
-        ) and not self.output_view.find_all_results():
+        if (exit_code == 0 or exit_code is None) and not self.output_view.find_all_results():
             self.window.run_command("hide_panel", {"panel": "output.exec"})

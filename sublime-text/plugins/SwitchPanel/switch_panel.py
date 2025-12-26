@@ -10,9 +10,7 @@ class SwitchPanel(sublime_plugin.WindowCommand):
         ignored_panels = cast(List[str], settings.get("ignored_panels", []))
 
         panels = [
-            panel
-            for panel in sorted(self.window.panels())
-            if panel not in ignored_panels and not self.is_empty(panel)
+            panel for panel in sorted(self.window.panels()) if panel not in ignored_panels and not self.is_empty(panel)
         ]
 
         active_panel = self.window.active_panel()
