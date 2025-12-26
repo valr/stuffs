@@ -23,8 +23,8 @@ class MarkdownToHtml(sublime_plugin.EventListener):
             filename = f"/tmp/sublimetext-{view.buffer_id()}.html"
             fileexists = os.path.exists(filename)
 
+            text = view.substr(sublime.Region(0, view.size()))
             with open(filename, "w") as file:
-                text = view.substr(sublime.Region(0, view.size()))
                 file.write(self.html_page(self.html_body(text)))
 
             if not fileexists:
