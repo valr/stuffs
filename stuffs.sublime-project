@@ -20,6 +20,10 @@
         "open_url_panel": {
             "extend_url_list": [
                 [
+                    "Sublime Text LSP Documentation",
+                    "https://lsp.sublimetext.io/"
+                ],
+                [
                     "Sublime Text LSP-pyright Configuration",
                     "https://github.com/microsoft/pyright/blob/main/docs/configuration.md"
                 ],
