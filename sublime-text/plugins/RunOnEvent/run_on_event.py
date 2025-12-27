@@ -1,26 +1,24 @@
 import os
-import re
 import subprocess
+from typing import cast
 
+import sublime
 import sublime_plugin
 
 
 class RunOnEvent(sublime_plugin.EventListener):
-    def on_post_save_async(self, view):
+    def on_post_save_async(self, view: sublime.View) -> None:
         self.run_command(view, "on_post_save")
 
-    def run_command(self, view, event):
+    def run_command(self, view: sublime.View, event: str) -> None:
         filename = view.file_name()
-        project_file_name = view.window().project_file_name()
-
-        if not filename or not project_file_name:
+        project_filename = view.window().project_file_name() if view.window() else None  # type: ignore
+        if not filename or not project_filename:
             return
 
-        command = re.sub("sublime-project$", "sublime-onevent", project_file_name)
-
+        command = project_filename.replace(".sublime-project", ".sublime-onevent")
         syntax = (
-            view.settings()
-            .get("syntax", "None")
+            cast(str, view.settings().get("syntax", "None"))
             .replace(".sublime-syntax", "")
             .replace(".tmLanguage", "")
             .split("/")[-1]
