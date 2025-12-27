@@ -18,6 +18,7 @@
         "LSP-jdtls",
         "LSP-json",
         "LSP-lemminx",
+        "LSP-marksman",
         "LSP-pyright",
         "LSP-ruff",
         "LSP-taplo",
@@ -29,6 +30,5 @@
         "Theme - Monokai Pro",
     ],
     // "install_missing": false,
-    "in_process_packages": [
-    ],
+    "in_process_packages": [],
 }
