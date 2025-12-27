@@ -14,7 +14,8 @@ class MarkdownToHtml(sublime_plugin.EventListener):
         self.lock = threading.Lock()
 
     def on_post_save_async(self, view: sublime.View):
-        if not view.settings().get("syntax").endswith("Markdown.sublime-syntax"):  # type: ignore
+        syntax = view.syntax()
+        if not syntax or syntax.name != "Markdown":
             return
 
         try:
