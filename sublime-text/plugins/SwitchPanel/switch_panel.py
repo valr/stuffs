@@ -26,7 +26,7 @@ class SwitchPanel(sublime_plugin.WindowCommand):
         output_panel = panel[len(prefix) :] if panel.startswith(prefix) else panel
 
         view = self.window.find_output_panel(output_panel)
-        if view is not None:
+        if view:
             return not view.substr(sublime.Region(0, view.size())).strip()
 
         return False
