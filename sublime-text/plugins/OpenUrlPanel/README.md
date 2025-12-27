@@ -7,7 +7,7 @@ The list is sorted by default. The URL selected in the panel will be opened in t
 
 ## Settings
 
-The settings can be defined globally in Package Settings ➔ OpenUrlPanel ➔ Settings.  
+The settings can be defined globally in the menu: Preferences ➔ Package Settings ➔ OpenUrlPanel ➔ Settings.  
 They can be overriden per project in the .sublime-project file, like this:
 
 ```json
