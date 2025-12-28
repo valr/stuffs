@@ -9,13 +9,19 @@ class RunOnEvent(sublime_plugin.EventListener):
     def on_post_save_async(self, view: sublime.View) -> None:
         self.run_command(view, "on_post_save")
 
-    def run_command(self, view: sublime.View, event: str) -> None:
-        filename = view.file_name()
-        project_filename = view.window().project_file_name() if view.window() else None  # type: ignore[reportOptionalMemberAccess]
-        if not filename or not project_filename:
+    def run_command(self, view: sublime.View, event_name: str) -> None:
+        window = view.window()
+        project_file_name = window.project_file_name() if window else None
+        if not project_file_name:
             return
 
-        syntax = view.syntax().name if view.syntax() else "None"  # type: ignore[reportOptionalMemberAccess]
-        command = project_filename.replace(".sublime-project", ".sublime-onevent")
+        file_name = view.file_name()
+        if not file_name:
+            return
+
+        syntax = view.syntax()
+        syntax_name = syntax.name if syntax else "None"
+
+        command = project_file_name.replace(".sublime-project", ".sublime-onevent")
         if os.path.isfile(command):
-            subprocess.Popen([command, event, syntax, filename], cwd=os.path.dirname(filename))
+            subprocess.Popen([command, event_name, syntax_name, file_name], cwd=os.path.dirname(file_name))

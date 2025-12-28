@@ -1,16 +1,23 @@
-from typing import List, cast
+from dataclasses import dataclass
+from typing import List
 
 import sublime
 import sublime_plugin
 
 
+@dataclass
+class Settings:
+    ignored_panels: List[str]
+
+
 class SwitchPanel(sublime_plugin.WindowCommand):
     def run(self):
-        settings = sublime.load_settings("SwitchPanel.sublime-settings")
-        ignored_panels = cast(List[str], settings.get("ignored_panels", []))
+        settings = Settings(**sublime.load_settings("SwitchPanel.sublime-settings").to_dict())
 
         panels = [
-            panel for panel in sorted(self.window.panels()) if panel not in ignored_panels and not self.is_empty(panel)
+            panel
+            for panel in sorted(self.window.panels())
+            if panel not in settings.ignored_panels and not self.is_empty(panel)
         ]
 
         active_panel = self.window.active_panel()

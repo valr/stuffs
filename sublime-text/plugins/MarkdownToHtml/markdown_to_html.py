@@ -33,8 +33,9 @@ class MarkdownToHtml(sublime_plugin.EventListener):
         finally:
             self.lock.release()
 
-        if view.window():
-            view.window().status_message("Markdown rendered in HTML")  # type: ignore[reportOptionalMemberAccess]
+        window = view.window()
+        if window:
+            window.status_message("Markdown rendered in HTML")
 
     def on_close(self, view: sublime.View):
         try:
