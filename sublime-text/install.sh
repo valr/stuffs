@@ -38,6 +38,7 @@ for SETTING in "CSS.sublime-settings" \
   "Package Control.sublime-settings" \
   "Package Control.user-ca-bundle" \
   "Preferences.sublime-settings" \
+  "Terminus.sublime-settings" \
   "mdpopups.css"; do
   rm -f "$TARGET/User/$SETTING"
   ln -s "$PWD/settings/$SETTING" "$TARGET/User/$SETTING"
