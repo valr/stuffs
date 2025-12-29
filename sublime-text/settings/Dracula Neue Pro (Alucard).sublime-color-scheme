@@ -1,0 +1,10 @@
+{
+    "variables": {},
+    "globals": {
+        // disabled as per BracketHighlighter documentation
+        "bracket_contents_options": "none",
+        "brackets_options": "none",
+        "tags_options": "none"
+    },
+    "rules": []
+}
