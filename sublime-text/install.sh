@@ -30,6 +30,7 @@ for SETTING in "CSS.sublime-settings" \
   "Default (Linux).sublime-keymap" \
   "Default.sublime-commands" \
   "Dracula Neue Pro (Alucard).sublime-color-scheme" \
+  "easy_diff.sublime-settings" \
   "HTML.sublime-settings" \
   "LSP-gopls.sublime-settings" \
   "LSP-jdtls.sublime-settings" \

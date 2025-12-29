@@ -1,0 +1,9 @@
+{
+    "show_internal": false,
+    "show_external": true,
+    "external_diff": "/usr/bin/meld",
+    "svn_disabled": true,
+    "hg_disabled": true,
+    "submenu": [],
+    "last_activated_commands": false,
+}
