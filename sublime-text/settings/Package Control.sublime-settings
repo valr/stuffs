@@ -4,6 +4,7 @@
         "BracketHighlighter",
         "Caddyfile Syntax",
         "Color Scheme - Dracula Neue",
+        "EasyDiff",
         "EditorConfig",
         "Generic Config",
         "GitHub Theme",
@@ -31,6 +32,5 @@
         "Terminus",
         "Theme - Monokai Pro",
     ],
-    // "install_missing": false,
     "in_process_packages": [],
 }
