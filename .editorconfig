@@ -32,6 +32,10 @@ indent_size = 4
 indent_style = space
 indent_size = 2
 
+[*.json]
+indent_style = space
+indent_size = 4
+
 [Makefile]
 indent_style = tab
 indent_size = 4
@@ -50,6 +54,10 @@ indent_style = space
 indent_size = 2
 space_redirects = true # shfmt
 switch_case_indent = true # shfmt
+
+[*.{sublime-settings,sublime-keymap,sublime-mousemap,sublime-color-scheme,sublime-theme,sublime-commands,sublime-menu}]
+indent_style = space
+indent_size = 4
 
 [*.{ts,tsx,mts,cts}]
 indent_style = space
