@@ -1,8 +1,0 @@
-[
-    {
-        "keys": [
-            "ctrl+escape"
-        ],
-        "command": "toggle_console"
-    }
-]
