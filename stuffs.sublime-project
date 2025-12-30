@@ -7,7 +7,7 @@
     "settings": {
         "lsp_format_on_save": true,
         "lsp_code_actions_on_save": {
-            "source.fixAll": true,
+            "source.fixAll": false,
             "source.organizeImports": true,
         },
         "LSP": {
