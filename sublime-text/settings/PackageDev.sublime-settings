@@ -1,5 +1,0 @@
-{
-    // disabled as per LSP-json documentation
-    "settings.auto_complete": false,
-    "settings.tooltip": false
-}

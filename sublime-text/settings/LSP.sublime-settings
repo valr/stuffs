@@ -1,7 +1,0 @@
-{
-    "show_diagnostics_count_in_view_status": true,
-    "show_code_lens": "phantom",
-    "show_inlay_hints": true,
-    "document_highlight_style": "",
-    "link_highlight_style": "none",
-}
