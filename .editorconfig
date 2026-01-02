@@ -55,7 +55,7 @@ indent_size = 2
 space_redirects = true # shfmt
 switch_case_indent = true # shfmt
 
-[*.{sublime-settings,sublime-keymap,sublime-mousemap,sublime-color-scheme,sublime-theme,sublime-commands,sublime-menu}]
+[*.sublime-*]
 indent_style = space
 indent_size = 4
 
